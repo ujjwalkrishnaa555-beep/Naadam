@@ -1,166 +1,52 @@
 <!DOCTYPE html>
-<html lang="ml">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naadam - Music Player</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      justify-content: space-between;
-    }
-
-    /* Main Container */
-    .container {
-      display: flex;
-      flex: 1;
-      padding: 20px;
-      gap: 20px;
-    }
-
-    .sidebar {
-      width: 250px;
-      background-color: #000000;
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .sidebar h2 {
-      color: #1db954; /* Spotify Green */
-      margin-bottom: 20px;
-    }
-
-    .main-content {
-      flex: 1;
-      background-color: #181818;
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .song-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #282828;
-      padding: 15px;
-      border-radius: 6px;
-      margin-top: 15px;
-    }
-
-    .play-btn {
-      background-color: #1db954;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .play-btn:hover {
-      background-color: #1ed760;
-    }
-
-    /* Bottom Player Bar */
-    .player-bar {
-      background-color: #181818;
-      border-top: 1px solid #282828;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .now-playing {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .now-playing .title {
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .now-playing .artist {
-      color: #b3b3b3;
-      font-size: 14px;
-    }
-
-    audio {
-      width: 40%;
-    }
-  </style>
+  <title>Naadam</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <h2>Naadam</h2>
-      <p style="color: #b3b3b3;">🎵 Library</p>
-    </div>
+<div class="sidebar">
+  <h2>🎵 Naadam</h2>
 
-    <!-- Main Content Area -->
-    <div class="main-content">
-      <h1>Popular Songs</h1>
+  <a href="#">🏠 Home</a>
+  <a href="#">🔍 Search</a>
+  <a href="#">🎶 Playlists</a>
+  <a href="#">❤️ Favorites</a>
+</div>
 
-      <!-- Song Item -->
-      <div class="song-card">
-        <div>
-          <h3>Sample Track 1</h3>
-          <p style="color: #b3b3b3;">Artist Name</p>
-        </div>
-        <button class="play-btn" onclick="playSong('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', 'Sample Track 1', 'Artist Name')">Play</button>
-      </div>
+<div class="main">
 
-      <div class="song-card">
-        <div>
-          <h3>Sample Track 2</h3>
-          <p style="color: #b3b3b3;">Another Artist</p>
-        </div>
-        <button class="play-btn" onclick="playSong('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', 'Sample Track 2', 'Another Artist')">Play</button>
-      </div>
-    </div>
+  <input type="text" placeholder="Search music...">
+
+  <div class="hero">
+    <h1>Welcome to Naadam</h1>
+    <p>Kerala Inspired Royalty-Free Music</p>
+
+    <button>▶ Play Now</button>
   </div>
 
-  <!-- Bottom Player Bar -->
-  <div class="player-bar">
-    <div class="now-playing">
-      <span class="title" id="current-title">Select a song</span>
-      <span class="artist" id="current-artist">-</span>
+  <div class="cards">
+
+    <div class="card">
+      🌴 Backwater Beats
     </div>
 
-    <audio id="audio-player" controls>
-      <source src="" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
+    <div class="card">
+      🌧️ Monsoon Memories
+    </div>
+
+    <div class="card">
+      🥁 Kerala Folk
+    </div>
+
   </div>
 
-  <!-- JavaScript to handle audio play -->
-  <script>
-    function playSong(songUrl, title, artist) {
-      const player = document.getElementById('audio-player');
-      const titleElement = document.getElementById('current-title');
-      const artistElement = document.getElementById('current-artist');
+</div>
 
-      player.src = songUrl;
-      titleElement.innerText = title;
-      artistElement.innerText = artist;
-
-      player.play();
-    }
-  </script>
+<script src="script.js"></script>
 
 </body>
 </html>
