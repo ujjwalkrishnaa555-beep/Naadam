@@ -1,169 +1,91 @@
 # Naadam
 Free royalty-free music streaming website
-<!naadam html>
-<html lang="ml">
+ <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naadam - Music Player</title>
+  <title>Naadam Music</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
     body {
+      font-family: Arial, sans-serif;
       background-color: #121212;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      justify-content: space-between;
-    }
-
-    /* Main Container */
-    .container {
-      display: flex;
-      flex: 1;
-      padding: 20px;
-      gap: 20px;
-    }
-
-    .sidebar {
-      width: 250px;
-      background-color: #000000;
-      border-radius: 8px;
+      color: white;
+      margin: 0;
       padding: 20px;
     }
-
-    .sidebar h2 {
-      color: #1db954; /* Spotify Green */
-      margin-bottom: 20px;
+    h1 {
+      color: #1db954;
     }
-
     .main-content {
-      flex: 1;
-      background-color: #181818;
-      border-radius: 8px;
-      padding: 20px;
+      margin-top: 20px;
     }
-
     .song-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #282828;
+      background-color: #181818;
       padding: 15px;
-      border-radius: 6px;
-      margin-top: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
     .play-btn {
       background-color: #1db954;
-      border: none;
       color: white;
-      padding: 10px 20px;
+      border: none;
+      padding: 10px 15px;
       border-radius: 20px;
       cursor: pointer;
-      font-weight: bold;
     }
-
-    .play-btn:hover {
-      background-color: #1ed760;
-    }
-
-    /* Bottom Player Bar */
     .player-bar {
-      background-color: #181818;
-      border-top: 1px solid #282828;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #282828;
+      padding: 15px;
+      text-align: center;
     }
-
-    .now-playing {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .now-playing .title {
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .now-playing .artist {
-      color: #b3b3b3;
-      font-size: 14px;
-    }
-
     audio {
-      width: 40%;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <h2>Naadam</h2>
-      <p style="color: #b3b3b3;">🎵 Library</p>
+  <h1>Naadam Music</h1>
+
+  <div class="main-content">
+    <h2>Songs</h2>
+
+    <!-- Kochukunjintachan Song Card -->
+    <div class="song-card">
+      <div>
+        <h3>Kochukunjintachan</h3>
+        <p style="color: #b3b3b3;">Malayalam Song</p>
+      </div>
+      <button class="play-btn" onclick="playSong('https://ia801503.us.archive.org/15/items/kochukunjintachan/Kochukunjintachan.mp3', 'Kochukunjintachan', 'Malayalam Song')">Play</button>
     </div>
 
-    <!-- Main Content Area -->
-    <div class="main-content">
-      <h1>Popular Songs</h1>
-
-      <!-- Song Item -->
-      <div class="song-card">
-        <div>
-          <h3>Sample Track 1</h3>
-          <p style="color: #b3b3b3;">Artist Name</p>
-        </div>
-        <button class="play-btn" onclick="playSong('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', 'Sample Track 1', 'Artist Name')">Play</button>
-      </div>
-
-      <div class="song-card">
-        <div>
-          <h3>Sample Track 2</h3>
-          <p style="color: #b3b3b3;">Another Artist</p>
-        </div>
-        <button class="play-btn" onclick="playSong('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', 'Sample Track 2', 'Another Artist')">Play</button>
-      </div>
-    </div>
   </div>
 
-  <!-- Bottom Player Bar -->
   <div class="player-bar">
-    <div class="now-playing">
-      <span class="title" id="current-title">Select a song</span>
-      <span class="artist" id="current-artist">-</span>
-    </div>
-
-    <audio id="audio-player" controls>
-      <source src="" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
+    <div id="now-playing">Select a song to play</div>
+    <audio id="audio-player" controls></audio>
   </div>
 
-  <!-- JavaScript to handle audio play -->
   <script>
-    function playSong(songUrl, title, artist) {
+    function playSong(url, title, artist) {
       const player = document.getElementById('audio-player');
-      const titleElement = document.getElementById('current-title');
-      const artistElement = document.getElementById('current-artist');
-
-      player.src = songUrl;
-      titleElement.innerText = title;
-      artistElement.innerText = artist;
-
+      const nowPlaying = document.getElementById('now-playing');
+      player.src = url;
       player.play();
+      nowPlaying.innerText = "Playing: " + title + " - " + artist;
     }
   </script>
 
 </body>
 </html>
-
+           
