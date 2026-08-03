@@ -1,6 +1,6 @@
 # Naadam
 Free royalty-free music streaming website
-<!DOCTYPE html>
+<!naadam html>
 <html lang="ml">
 <head>
   <meta charset="UTF-8">
