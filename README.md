@@ -1,18 +1,17 @@
 # Naadam
 Free royalty-free music streaming website
-<!DOCTYPE html>
+<!naadam html>
 <html lang="ml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Naadam Music Player</title>
   
-  <!-- CSS ഡിസൈൻ ഇവിടെ കൊടുക്കാം -->
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
     body { background-color: #121212; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
     .player-card { background-color: #1e1e1e; padding: 25px; border-radius: 20px; width: 340px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
-    .song-details h2 { font-size: 1.2rem; margin-bottom: 5px; }
+    .song-details h2 { font-size: 1.2rem; margin-bottom: 5px; color: #ff6b00; }
     .song-details p { font-size: 0.9rem; color: #aaa; margin-bottom: 20px; }
     .progress-container { background: #333; border-radius: 5px; cursor: pointer; height: 6px; width: 100%; margin-bottom: 20px; }
     .progress { background-color: #ff6b00; border-radius: 5px; height: 100%; width: 0%; transition: width 0.1s linear; }
@@ -29,7 +28,7 @@ Free royalty-free music streaming website
 
   <div class="player-card">
     <div class="song-details">
-      <h2 id="title">Select a song</h2>
+      <h2 id="title">Loading...</h2>
       <p id="artist">Artist Name</p>
     </div>
 
@@ -49,18 +48,13 @@ Free royalty-free music streaming website
     </div>
   </div>
 
-  <!-- JavaScript വർക്കിംഗ് കോഡ് ഇവിടെ കൊടുക്കാം -->
   <script>
+    // ഡ്രൈവിലെ പാട്ടിന്റെ ഡയറക്റ്റ് ലിങ്ക് ഇവിടെ നൽകിയിട്ടുണ്ട്
     const songs = [
       {
-        title: "Kochukunjintachan",
-        artist: "Malayalam Song",
-        audioSrc: "YOUR_AUDIO_LINK_1.mp3"
-      },
-      {
-        title: "Nenjukkul Peidhidhum",
-        artist: "Vaaranam Aayiram",
-        audioSrc: "YOUR_AUDIO_LINK_2.mp3"
+        title: "Vaa Senthaazhini",
+        artist: "Adiyae | Justin Prabhakaran",
+        audioSrc: "https://drive.google.com/uc?export=download&id=1E1l79eYV_VdG-QY-X-L-X-X"
       }
     ];
 
@@ -134,3 +128,4 @@ Free royalty-free music streaming website
 </body>
 </html>
 
+          
