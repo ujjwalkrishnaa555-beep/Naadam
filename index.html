@@ -47,6 +47,20 @@
 </div>
 
 <script src="script.js"></script>
+<div class="player">
+  <div class="now-playing">
+    🎵 <span id="songTitle">No song playing</span>
+  </div>
 
+  <div>
+    <button onclick="prevSong()">⏮</button>
+    <button onclick="playPause()">▶ / ⏸</button>
+    <button onclick="nextSong()">⏭</button>
+  </div>
+
+  <input type="range" id="progress" value="0">
+
+  <audio id="audio"></audio>
+</div>
 </body>
 </html>
