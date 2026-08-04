@@ -124,3 +124,18 @@ progress.addEventListener("input", () => {
         audio.currentTime = (progress.value / 100) * audio.duration;
     }
 });
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
+}
+
+audio.addEventListener("loadedmetadata", () => {
+    document.getElementById("duration").textContent =
+        formatTime(audio.duration);
+});
+
+audio.addEventListener("timeupdate", () => {
+    document.getElementById("currentTime").textContent =
+        formatTime(audio.currentTime);
+});
