@@ -109,6 +109,38 @@ if (playIcon && audio) {
         } else {
             audio.pause();
         }
+        if (audio && playIcon && progress && currentTime && duration) {
+
+    playIcon.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    audio.addEventListener("play", () => {
+        playIcon.classList.replace("fa-circle-play", "fa-circle-pause");
+    });
+
+    audio.addEventListener("pause", () => {
+        playIcon.classList.replace("fa-circle-pause", "fa-circle-play");
+    });
+
+    audio.addEventListener("loadedmetadata", () => {
+        duration.textContent = formatTime(audio.duration);
+    });
+
+    audio.addEventListener("timeupdate", () => {
+        progress.value = (audio.currentTime / audio.duration) * 100;
+        currentTime.textContent = formatTime(audio.currentTime);
+    });
+
+    progress.addEventListener("input", () => {
+        audio.currentTime = (progress.value / 100) * audio.duration;
+    });
+
+        }
     });
 }
 const progress = document.getElementById("progress");
