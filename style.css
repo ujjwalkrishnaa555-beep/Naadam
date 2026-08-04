@@ -294,4 +294,41 @@ transition:opacity .5s ease;
 }
 
 .hero{
+    padding:30px;
+    height:55vh;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.card-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.section-title h2{
+    font-size:22px;
+}
+
+.mini-player{
+    padding:10px;
+}
+
+.song-info img{
+    width:45px;
+    height:45px;
+}
+
+}
+
+
+   
     
