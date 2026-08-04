@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Naadam</title>
   <link rel="stylesheet" href="style.css">
@@ -56,20 +56,23 @@
 
 </div>
 
-<div class="player">
-  <div class="now-playing">
-    🎵 <span id="songTitle">No song playing</span>
+<!-- Floating Player UI (replaces previous player bar) -->
+<div class="music-player-bar">
+  <div class="song-details">
+    <img src="album-art.jpg" alt="Album Cover" class="album-art">
+    <div class="track-info">
+      <div class="song-title">Ehsaas</div>
+      <div class="artist-name">Faheem Abdullah</div>
+    </div>
   </div>
 
-  <div>
-    <button onclick="prevSong()">⏮</button>
-    <button onclick="playPause()">▶ / ⏸</button>
-    <button onclick="nextSong()">⏭</button>
+  <div class="player-controls">
+    <button class="btn-icon device-btn">🖥️</button>
+    <button class="btn-icon add-btn">+</button>
+    <button class="btn-play-pause animated-pulse">
+      ▶
+    </button>
   </div>
-
-  <input type="range" id="progress" value="0">
-
-  <audio id="audio"></audio>
 </div>
 
 <script src="Script.js" defer></script>
