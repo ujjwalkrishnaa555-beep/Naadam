@@ -84,3 +84,39 @@ input{
     transform:scale(1.05);
     background:#2b2b2b;
 }
+.player{
+    position:fixed;
+    bottom:0;
+    left:220px;
+    right:0;
+    height:80px;
+    background:#181818;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 25px;
+    border-top:1px solid #333;
+}
+
+.player button{
+    background:#ff7a00;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:0 5px;
+}
+
+.player button:hover{
+    background:#ff9500;
+}
+
+#progress{
+    width:300px;
+}
+
+.now-playing{
+    font-size:15px;
+    color:#ddd;
+}
