@@ -1,167 +1,328 @@
+/* =========================
+   NAADAM - STYLE.CSS PART 1
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
 }
 
 body{
+    font-family:'Poppins',sans-serif;
+    background:#0D0D0D;
+    color:#fff;
+}
+
+/* Navbar */
+
+.navbar{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#111;
     display:flex;
-    background:#0f0f0f;
-    color:white;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+    z-index:1000;
 }
 
-.sidebar{
-    width:220px;
-    height:100vh;
-    background:#181818;
-    padding:20px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#FF7A00;
+    font-size:28px;
+    font-weight:700;
 }
 
-.sidebar-top{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
-.logo{ width:36px; height:36px; object-fit:contain; }
-
-.sidebar h2{
-    color:#ff7a00;
-    margin-bottom:10px;
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
 }
 
-.sidebar a{
-    display:block;
-    color:white;
+.nav-links a{
     text-decoration:none;
-    margin:15px 0;
+    color:white;
     transition:.3s;
 }
 
-/* Home link: small orange pill instead of full-width block */
-.sidebar a.home-link{
-    display:inline-block;
-    background:#ff7a00;
-    color:white;
-    padding:6px 10px;
-    border-radius:10px;
-    margin-bottom:12px; /* keep spacing from next link */
-    text-decoration:none;
-    font-weight:600;
+.nav-links a:hover,
+.nav-links .active{
+    color:#FF7A00;
 }
 
-.sidebar a.home-link:hover{
-    background:#ff9500;
+.profile{
+    width:45px;
+    height:45px;
+    background:#FF7A00;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    cursor:pointer;
 }
 
-.sidebar a:hover{
-    color:#ff7a00;
+/* Hero */
+
+.hero{
+    height:70vh;
+    display:flex;
+    align-items:center;
+    padding:60px;
+    background:linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.75)
+    ),
+    url("assets/hero.jpg") center/cover;
 }
 
-.main{
-    flex:1;
-    padding:25px;
-    position:relative; /* needed for absolute-positioned floating badge */
+.hero-content{
+    max-width:600px;
 }
 
-input{
-    width:100%;
-    padding:12px;
+.hero h1{
+    font-size:58px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.play-btn,
+.browse-btn{
+    padding:14px 30px;
     border:none;
-    border-radius:10px;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.play-btn{
+    background:#FF7A00;
+    color:#fff;
+}
+
+.play-btn:hover{
+    transform:scale(1.05);
+}
+
+.browse-btn{
+    background:#222;
+    color:#fff;
+}
+
+.browse-btn:hover{
+    background:#333;
+}/* =========================
+   NAADAM - STYLE.CSS PART 2
+========================= */
+
+/* Search Section */
+
+.search-section{
+    padding:30px;
+}
+
+.search-box{
+    max-width:700px;
+    margin:auto;
+    background:#1A1A1A;
+    border-radius:50px;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.search-box i{
+    color:#FF7A00;
+    font-size:18px;
+}
+
+.search-box input{
+    flex:1;
+    background:transparent;
+    border:none;
     outline:none;
+    color:#fff;
+    font-size:16px;
+}
+
+.search-box input::placeholder{
+    color:#999;
+}
+
+/* Sections */
+
+.section{
+    padding:40px 30px;
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     margin-bottom:25px;
 }
 
-.hero{
-    background:linear-gradient(135deg,#ff7a00,#ff9a2f);
-    color:white;
-    padding:35px;
-    border-radius:15px;
+.section-title h2{
+    font-size:28px;
 }
 
-.hero button{
-    margin-top:15px;
-    background:black;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:8px;
-    cursor:pointer;
+.section-title a{
+    color:#FF7A00;
+    text-decoration:none;
 }
 
-.cards{
+/* Cards */
+
+.card-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
-    margin-top:30px;
 }
 
-.card{
-    background:#1f1f1f;
-    padding:20px;
-    border-radius:12px;
+.music-card{
+    background:#1A1A1A;
+    border-radius:18px;
+    padding:15px;
     transition:.3s;
-}
-
-.card:hover{
-    transform:scale(1.05);
-    background:#2b2b2b;
-}
-.player{
-    position:fixed;
-    bottom:0;
-    left:220px;
-    right:0;
-    height:80px;
-    background:#181818;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px 25px;
-    border-top:1px solid #333;
-}
-
-.player button{
-    background:#ff7a00;
-    color:white;
-    border:none;
-    padding:10px 18px;
-    border-radius:8px;
     cursor:pointer;
-    margin:0 5px;
 }
 
-.player button:hover{
-    background:#ff9500;
+.music-card:hover{
+    transform:translateY(-8px);
+    background:#232323;
 }
 
-#progress{
-    width:300px;
+.music-card img{
+    width:100%;
+    aspect-ratio:1;
+    object-fit:cover;
+    border-radius:14px;
+    margin-bottom:12px;
 }
 
-.now-playing{
-    font-size:15px;
-    color:#ddd;
+.music-card h3{
+    margin-bottom:6px;
 }
 
-/* Floating small orange box (badge) for the marked area */
-.floating-badge{
-    position:absolute;
-    left:20px;            /* inside .main, distance from left edge */
-    bottom:120px;         /* place it above the fixed player bar */
-    width:76px;
-    height:40px;
-    background:#ff7a00;
-    color:#111;
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:700;
-    box-shadow:0 6px 18px rgba(0,0,0,0.45);
-    cursor:pointer;
-    z-index:20;
+.music-card p{
+    color:#aaa;
     font-size:14px;
 }
 
-/* small responsive tweak for narrow screens */
-@media (max-width:600px){
-    .floating-badge{ left:12px; bottom:180px; transform:scale(0.9); }
+/* Mini Player */
+
+.mini-player{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#111;
+    padding:12px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid #333;
 }
+
+.song-info{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.song-info img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.song-info h4{
+    font-size:15px;
+}
+
+.song-info p{
+    font-size:13px;
+    color:#999;
+}
+
+.player-controls{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.player-controls i{
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.player-controls i:hover{
+    color:#FF7A00;
+}
+
+.play-icon{
+    font-size:38px !important;
+    color:#FF7A00;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.nav-links{
+    display:none;
+}
+
+.hero{
+    padding:30px;
+    height:55vh;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.card-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.section-title h2{
+    font-size:22px;
+}
+
+.mini-player{
+    padding:10px;
+}
+
+.song-info img{
+    width:45px;
+    height:45px;
+}
+
+        }
