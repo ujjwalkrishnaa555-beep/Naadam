@@ -31,6 +31,22 @@ body{
     transition:.3s;
 }
 
+/* Home link: small orange pill instead of full-width block */
+.sidebar a.home-link{
+    display:inline-block;
+    background:#ff7a00;
+    color:white;
+    padding:6px 10px;
+    border-radius:10px;
+    margin-bottom:12px; /* keep spacing from next link */
+    text-decoration:none;
+    font-weight:600;
+}
+
+.sidebar a.home-link:hover{
+    background:#ff9500;
+}
+
 .sidebar a:hover{
     color:#ff7a00;
 }
@@ -38,6 +54,7 @@ body{
 .main{
     flex:1;
     padding:25px;
+    position:relative; /* needed for absolute-positioned floating badge */
 }
 
 input{
@@ -119,4 +136,29 @@ input{
 .now-playing{
     font-size:15px;
     color:#ddd;
+}
+
+/* Floating small orange box (badge) for the marked area */
+.floating-badge{
+    position:absolute;
+    left:20px;            /* inside .main, distance from left edge */
+    bottom:120px;         /* place it above the fixed player bar */
+    width:76px;
+    height:40px;
+    background:#ff7a00;
+    color:#111;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    box-shadow:0 6px 18px rgba(0,0,0,0.45);
+    cursor:pointer;
+    z-index:20;
+    font-size:14px;
+}
+
+/* small responsive tweak for narrow screens */
+@media (max-width:600px){
+    .floating-badge{ left:12px; bottom:180px; transform:scale(0.9); }
 }
