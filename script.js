@@ -50,66 +50,25 @@ cards.forEach(card => {
 
     });
 
-});
+})
 // =========================
 // NAADAM - SCRIPT.JS PART 2
 // =========================
 
-// Mini Player Controls
-
+// Mini Player
+const audio = document.getElementById("audioPlayer");
 const playIcon = document.querySelector(".play-icon");
-let isPlaying = false;
+const progress = document.getElementById("progress");
+const currentTime = document.getElementById("currentTime");
+const duration = document.getElementById("duration");
 
-if (playIcon) {
-    playIcon.addEventListener("click", () => {
-
-        if (!isPlaying) {
-            playIcon.classList.remove("fa-circle-play");
-            playIcon.classList.add("fa-circle-pause");
-            isPlaying = true;
-        } else {
-            playIcon.classList.remove("fa-circle-pause");
-            playIcon.classList.add("fa-circle-play");
-            isPlaying = false;
-        }
-
-    });
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
 }
 
-// Highlight Active Navigation
-
-const navLinks = document.querySelectorAll(".nav-links a");
-
-navLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.forEach(item => item.classList.remove("active"));
-
-        link.classList.add("active");
-
-    });
-
-});
-
-// Simple Fade Animation
-
-window.addEventListener("load", () => {
-
-    document.body.style.opacity = "1";
-
-});
-
-const audio = document.getElementById("audioPlayer");
-
-if (playIcon && audio) {
-    playIcon.addEventListener("click", () => {
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
-        }
-        if (audio && playIcon && progress && currentTime && duration) {
+if (audio && playIcon && progress && currentTime && duration) {
 
     playIcon.addEventListener("click", () => {
         if (audio.paused) {
@@ -139,34 +98,19 @@ if (playIcon && audio) {
     progress.addEventListener("input", () => {
         audio.currentTime = (progress.value / 100) * audio.duration;
     });
-
-        }
-
-const progress = document.getElementById("progress");
-
-audio.addEventListener("timeupdate", () => {
-    if (audio.duration) {
-        progress.value = (audio.currentTime / audio.duration) * 100;
-    }
-});
-
-progress.addEventListener("input", () => {
-    if (audio.duration) {
-        audio.currentTime = (progress.value / 100) * audio.duration;
-    }
-});
-function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
 }
 
-audio.addEventListener("loadedmetadata", () => {
-    document.getElementById("duration").textContent =
-        formatTime(audio.duration);
+// Highlight Active Navigation
+const navLinks = document.querySelectorAll(".nav-links a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.forEach(item => item.classList.remove("active"));
+        link.classList.add("active");
+    });
 });
 
-audio.addEventListener("timeupdate", () => {
-    document.getElementById("currentTime").textContent =
-        formatTime(audio.currentTime);
+// Page Fade
+window.addEventListener("load", () => {
+    document.body.style.opacity = "1";
 });
