@@ -366,3 +366,12 @@ img{
 .nav-links a{
     transition:all .3s ease;
 }
+.progress-container{
+    width:35%;
+}
+
+#progress{
+    width:100%;
+    accent-color:#FF7A00;
+    cursor:pointer;
+}
