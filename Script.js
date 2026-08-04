@@ -99,8 +99,4 @@ window.addEventListener("load", () => {
     document.body.style.opacity = "1";
 
 });
-});
-body{
-    opacity:0;
-    transition:opacity .5s ease;
-}
+
