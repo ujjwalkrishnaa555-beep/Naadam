@@ -1,75 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naadam</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naadam - Feel Every Beat</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="sidebar">
-  <div class="sidebar-top">
-    <img src="logo.svg" alt="Naadam logo" class="logo">
-    <h2>🎵 Naadam</h2>
-  </div>
+<header>
 
-  <a href="#">🏠 Home</a>
-  <a href="#">🔍 Search</a>
-  <a href="#">🎶 Playlists</a>
-  <a href="#">❤️ Favorites</a>
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-music"></i>
+<span>Naadam</span>
 </div>
 
-<div class="main">
+<ul class="nav-links">
+<li><a href="#" class="active">Home</a></li>
+<li><a href="#">Search</a></li>
+<li><a href="#">Library</a></li>
+<li><a href="#">Premium</a></li>
+</ul>
 
-  <input type="text" placeholder="Search music...">
+<div class="profile">
+<i class="fa-solid fa-user"></i>
+</div>
 
-  <div class="hero">
-    <h1>Welcome to Naadam</h1>
-    <p>Kerala Inspired Royalty-Free Music</p>
+</nav>
 
-    <button id="heroPlay">▶ Play Now</button>
-  </div>
+</header>
 
-  <div class="cards">
 
-    <div class="card">
-      🌴 Backwater Beats
-    </div>
+<!-- HERO SECTION -->
 
-    <div class="card">
-      🌧️ Monsoon Memories
-    </div>
+<section class="hero">
 
-    <div class="card">
-      🥁 Kerala Folk
-    </div>
+<div class="hero-content">
 
-  </div>
+<h1>Feel Every Beat</h1>
+
+<p>
+Discover Malayalam, Tamil, Hindi,
+English and global music in one place.
+</p>
+
+<div class="hero-buttons">
+
+<button class="play-btn">
+<i class="fa-solid fa-play"></i>
+Play Now
+</button>
+
+<button class="browse-btn">
+Browse Music
+</button>
 
 </div>
 
-<div class="player">
-  <div class="now-playing">
-    🎵 <span id="songTitle">No song playing</span>
-  </div>
-
-  <div>
-    <button onclick="prevSong()">⏮</button>
-    <button onclick="playPause()">▶ / ⏸</button>
-    <button onclick="nextSong()">⏭</button>
-  </div>
-
-  <input type="range" id="progress" value="0">
-
-  <audio id="audio"></audio>
 </div>
 
-<footer class="site-footer">
-  <p style="text-align:center; font-size:0.95rem; margin:0.5rem 0 0">Created by: ujjwal Krishna</p>
-  <p style="text-align:center; font-size:0.9rem; margin:0.25rem 0">Phone: <a href="tel:+918590921747">+91 85909 21747</a> &nbsp;|&nbsp; Email: <a href="mailto:ujjwalkrishna0555@gmail.com">ujjwalkrishna0555@gmail.com</a></p>
-</footer>
+</section>
 
-<script src="Script.js" defer></script>
-</body>
-</html>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search songs, artists or albums">
+
+</div>
+
+</section>
+
+
+<!-- TRENDING SECTION -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>🔥 Trending Now</h2>
+
+<a href="#">See All</a>
+
+</div>
+
+<div class="card-container">
