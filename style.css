@@ -101,109 +101,41 @@ input{
     transform:scale(1.05);
     background:#2b2b2b;
 }
-
-/* Old player removed; new floating player styles below */
-
-/* Floating Bottom Bar Container */
-.music-player-bar {
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 92%;
-  max-width: 450px;
-  background: rgba(30, 30, 30, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 12px;
-  padding: 8px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 1000;
+.player{
+    position:fixed;
+    bottom:0;
+    left:220px;
+    right:0;
+    height:80px;
+    background:#181818;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 25px;
+    border-top:1px solid #333;
 }
 
-/* Song Info Layout */
-.song-details {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
-  min-width: 0; /* Prevents overflow */
+.player button{
+    background:#ff7a00;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:0 5px;
 }
 
-.album-art {
-  width: 42px;
-  height: 42px;
-  border-radius: 6px;
-  object-fit: cover;
+.player button:hover{
+    background:#ff9500;
 }
 
-.track-info {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+#progress{
+    width:300px;
 }
 
-.song-title {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.artist-name {
-  color: #b3b3b3;
-  font-size: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Controls */
-.player-controls {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.btn-icon {
-  background: none;
-  border: none;
-  color: #b3b3b3;
-  font-size: 18px;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.btn-icon:hover {
-  color: #fff;
-}
-
-/* Play/Pause Button with Pulse Animation */
-.btn-play-pause {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.animated-pulse {
-  animation: pulse-glow 2s infinite ease-in-out;
-}
-
-@keyframes pulse-glow {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); opacity: 0.9; }
-  100% { transform: scale(1); }
+.now-playing{
+    font-size:15px;
+    color:#ddd;
 }
 
 /* Floating small orange box (badge) for the marked area */
@@ -229,19 +161,4 @@ input{
 /* small responsive tweak for narrow screens */
 @media (max-width:600px){
     .floating-badge{ left:12px; bottom:180px; transform:scale(0.9); }
-}
-
-/* Sidebar contact: small orange text under Favorites */
-.sidebar .contact{
-    margin-top:18px;
-    color:#ff7a00;
-    font-size:0.9rem;
-    line-height:1.3;
-}
-.sidebar .contact a{
-    color:#ff7a00;
-    text-decoration:none;
-}
-.sidebar .contact p{
-    margin:4px 0;
 }
