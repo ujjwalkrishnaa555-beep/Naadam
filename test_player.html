@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Naadam — Test Player</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:2rem}
+    .container{max-width:640px;margin:0 auto}
+    button{padding:0.6rem 1rem;font-size:1rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Naadam — Test Player</h1>
+    <p>This page tests the audio file directly in-page using the raw GitHub URL.</p>
+
+    <audio id="dbgAudio" controls crossorigin="anonymous" preload="metadata" style="width:100%">
+      <source src="https://raw.githubusercontent.com/ujjwalkrishnaa555-beep/Naadam/main/songs/Vaa_Senthaazhini_Lyric_Video___Adiyae___G.V.Prakash_Kumar,_Gouri_Kishan__Justin_Prabhakaran__Vignesh(256k).mp3" type="audio/mpeg">
+      Your browser doesn't support HTML5 audio.
+    </audio>
+
+    <div style="margin-top:1rem">
+      <button id="playBtn">▶ Play</button>
+      <button id="pauseBtn">⏸ Pause</button>
+      <button id="reloadBtn">🔁 Reload Source</button>
+    </div>
+
+    <pre id="log" style="background:#f4f4f5;padding:1rem;margin-top:1rem;white-space:pre-wrap"></pre>
+  </div>
+
+  <script>
+    const dbg = document.getElementById('dbgAudio');
+    const logEl = document.getElementById('log');
+    function log(...args){ console.log(...args); logEl.textContent += args.join(' ') + '\n'; }
+
+    document.getElementById('playBtn').addEventListener('click', async ()=>{
+      try{
+        await dbg.play();
+        log('play() resolved');
+      }catch(e){
+        log('play() rejected:', e);
+      }
+    });
+    document.getElementById('pauseBtn').addEventListener('click', ()=>{ dbg.pause(); log('paused'); });
+    document.getElementById('reloadBtn').addEventListener('click', ()=>{ dbg.load(); log('reloaded'); });
+
+    dbg.addEventListener('error', ()=>{
+      log('audio error', dbg.error);
+    });
+    dbg.addEventListener('canplay', ()=>{ log('canplay — duration', dbg.duration); });
+    dbg.addEventListener('loadedmetadata', ()=>{ log('loadedmetadata — duration', dbg.duration); });
+    dbg.addEventListener('playing', ()=>{ log('playing'); });
+    dbg.addEventListener('stalled', ()=>{ log('stalled'); });
+  </script>
+</body>
+</html>
