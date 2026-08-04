@@ -1,22 +1,8 @@
 // Naadam Music Player
-const songs = [
+    const songs = [
   {
     title: "Vaa Senthaazhini",
     file: "songs/Vaa_Senthaazhini_Lyric_Video___Adiyae___G.V.Prakash_Kumar,_Gouri_Kishan__Justin_Prabhakaran__Vignesh(256k).mp3"
-  }
-];
-const songs = [
-  {
-    title: "Backwater Beats",
-    file: "songs/backwater-beats.mp3"
-  },
-  {
-    title: "Monsoon Memories",
-    file: "songs/monsoon-memories.mp3"
-  },
-  {
-    title: "Kerala Folk",
-    file: "songs/kerala-folk.mp3"
   }
 ];
 
@@ -39,11 +25,9 @@ playBtn.addEventListener("click", () => {
     audio.play();
 });
 
-cards.forEach((card, index) => {
-    card.addEventListener("click", () => {
-        loadSong(index);
-        audio.play();
-    });
+cards.forEach(() => {
+    loadSong(0);
+    audio.play();
 });
 
 function playPause() {
@@ -55,20 +39,19 @@ function playPause() {
 }
 
 function nextSong() {
-    currentSong = (currentSong + 1) % songs.length;
-    loadSong(currentSong);
+    loadSong(0);
     audio.play();
 }
 
 function prevSong() {
-    currentSong = (currentSong - 1 + songs.length) % songs.length;
-    loadSong(currentSong);
+    loadSong(0);
     audio.play();
 }
 
-audio.addEventListener("ended", nextSong);
+audio.addEventListener("ended", () => {
+    loadSong(0);
+});
 
-// Live Search
 search.addEventListener("keyup", () => {
     const value = search.value.toLowerCase();
 
