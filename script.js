@@ -141,8 +141,7 @@ if (playIcon && audio) {
     });
 
         }
-    });
-}
+
 const progress = document.getElementById("progress");
 
 audio.addEventListener("timeupdate", () => {
