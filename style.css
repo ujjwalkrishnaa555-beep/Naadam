@@ -18,9 +18,12 @@ body{
     padding:20px;
 }
 
+.sidebar-top{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.logo{ width:36px; height:36px; object-fit:contain; }
+
 .sidebar h2{
     color:#ff7a00;
-    margin-bottom:30px;
+    margin-bottom:10px;
 }
 
 .sidebar a{
