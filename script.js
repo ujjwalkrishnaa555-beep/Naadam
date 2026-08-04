@@ -111,3 +111,16 @@ if (playIcon && audio) {
         }
     });
 }
+const progress = document.getElementById("progress");
+
+audio.addEventListener("timeupdate", () => {
+    if (audio.duration) {
+        progress.value = (audio.currentTime / audio.duration) * 100;
+    }
+});
+
+progress.addEventListener("input", () => {
+    if (audio.duration) {
+        audio.currentTime = (progress.value / 100) * audio.duration;
+    }
+});
