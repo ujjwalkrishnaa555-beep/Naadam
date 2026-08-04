@@ -1,5 +1,10 @@
 // Naadam Music Player
-
+const songs = [
+  {
+    title: "Vaa Senthaazhini",
+    file: "songs/Vaa_Senthaazhini_Lyric_Video___Adiyae___G.V.Prakash_Kumar,_Gouri_Kishan__Justin_Prabhakaran__Vignesh(256k).mp3"
+  }
+];
 const songs = [
   {
     title: "Backwater Beats",
