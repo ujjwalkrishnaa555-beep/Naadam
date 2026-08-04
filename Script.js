@@ -100,3 +100,14 @@ window.addEventListener("load", () => {
 
 });
 
+const audio = document.getElementById("audioPlayer");
+
+if (playIcon && audio) {
+    playIcon.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+}
