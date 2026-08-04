@@ -51,3 +51,51 @@ cards.forEach(card => {
     });
 
 });
+// =========================
+// NAADAM - SCRIPT.JS PART 2
+// =========================
+
+// Mini Player Controls
+
+const playIcon = document.querySelector(".play-icon");
+let isPlaying = false;
+
+if (playIcon) {
+    playIcon.addEventListener("click", () => {
+
+        if (!isPlaying) {
+            playIcon.classList.remove("fa-circle-play");
+            playIcon.classList.add("fa-circle-pause");
+            isPlaying = true;
+        } else {
+            playIcon.classList.remove("fa-circle-pause");
+            playIcon.classList.add("fa-circle-play");
+            isPlaying = false;
+        }
+
+    });
+}
+
+// Highlight Active Navigation
+
+const navLinks = document.querySelectorAll(".nav-links a");
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.forEach(item => item.classList.remove("active"));
+
+        link.classList.add("active");
+
+    });
+
+});
+
+// Simple Fade Animation
+
+window.addEventListener("load", () => {
+
+    document.body.style.opacity = "1";
+
+});
