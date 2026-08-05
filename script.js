@@ -6,23 +6,27 @@
 // Song Database
 
 const songs = [
-    {
-        title: "Vaa Senthaazhini",
-        artist: "G.V. Prakash Kumar",
-        file: "songs/Vaa_Senthaazhini_Lyric_Video___Adiyae___G.V.Prakash_Kumar,_Gouri_Kishan__Justin_Prabhakaran__Vignesh(256k).mp3"
-    },
+{
+title:"Vaa Senthaazhini",
+artist:"G.V. Prakash Kumar",
+file:"songs/Vaa_Senthaazhini_Lyric_Video___Adiyae___G.V.Prakash_Kumar,_Gouri_Kishan__Justin_Prabhakaran__Vignesh(256k).mp3",
+image:"images/vaa.jpg"
+},
 
-    {
-        title: "Idhuvum Kadandhu Pogum (Reprise)",
-        artist: "Girishh",
-        file: "songs/Netrikann_-_Idhuvum_Kadandhu_Pogum_Reprise_Lyric___Nayanthara___Vignesh_Shivan___MilindRau,_Girishh(256k).mp3"
-    },
+{
+title:"Idhuvum Kadandhu Pogum (Reprise)",
+artist:"Girishh",
+file:"songs/Netrikann_-_Idhuvum_Kadandhu_Pogum_Reprise_Lyric___Nayanthara___Vignesh_Shivan___MilindRau,_Girishh(256k).mp3",
+image:"images/idhuvum.jpg"
+},
 
-    {
-        title: "Kaadhal Ponmaan",
-        artist: "Neha Nair",
-        file: "songs/Kaadhal_Ponmaan_Video_I_Night_Riders___Mathew_I_Meenakshi___Neha_Nair__Vishnu_Vijay__Yakzan__Vinayak(256k).mp3"
-    }
+{
+title:"Kaadhal Ponmaan",
+artist:"Neha Nair",
+file:"songs/Kaadhal_Ponmaan_Video_I_Night_Riders___Mathew_I_Meenakshi___Neha_Nair__Vishnu_Vijay__Yakzan__Vinayak(256k).mp3",
+image:"images/kaadhal.jpg"
+}
+
 ];
 
 
