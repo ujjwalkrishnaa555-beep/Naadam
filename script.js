@@ -62,7 +62,6 @@ const duration = document.querySelector(".time span:last-child");
 
 // Load Song
 function createSongCards(){
-function createSongCards(){
 
     const container = document.getElementById("songCards");
 
