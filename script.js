@@ -74,7 +74,8 @@ miniArtist.innerHTML = song.artist;
 // });
 
 
-    audio.src = song.file;
+    audio.src = encodeURI(song.file);
+audio.load();
 
 }
 
