@@ -94,7 +94,7 @@ image:"images/Pajara punch.jpg"
 title:"Pottala Muttaye",
 artist:"Santhosh Narayanan",
 file:"songs/Pottala_Muttaye___Thalaivan_Thalaivii___Vijay_Sethupathi,Nithya_Menen__Pandiraaj__Santhosh_Narayanan(256k).mp3",
-image:"images/Pajara punch.jpg"
+image:"images/Pottala-Muttaye.jpg"
 },
 
 {
