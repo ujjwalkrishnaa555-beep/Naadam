@@ -639,3 +639,31 @@ section h3{
         transform:translateY(0);
     }
 
+/* SONGS HORIZONTAL FIX */
+
+#songCards{
+    display:flex !important;
+    flex-direction:row !important;
+    gap:15px;
+    overflow-x:auto;
+    width:100%;
+}
+
+#songCards::-webkit-scrollbar{
+    display:none;
+}
+
+.song-card{
+    min-width:160px !important;
+    flex:0 0 auto;
+    background:#181818;
+    padding:12px;
+    border-radius:18px;
+}
+
+.song-card img{
+    width:160px !important;
+    height:160px !important;
+    border-radius:15px;
+    object-fit:cover;
+}
