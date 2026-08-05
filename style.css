@@ -475,3 +475,39 @@ section h3{
 .playlist::-webkit-scrollbar{
     display:none;
 }
+.song-list{
+    padding:20px;
+}
+
+#songCards{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.song-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#181818;
+    padding:10px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.song-card img{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.song-card h4{
+    color:#fff;
+    font-size:16px;
+}
+
+.song-card p{
+    color:#aaa;
+    font-size:13px;
+}
