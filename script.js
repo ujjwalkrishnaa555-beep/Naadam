@@ -61,17 +61,17 @@ const duration = document.querySelector(".time span:last-child");
 function loadSong(){
 
     let song = songs[currentSong];
+    
+ songTitle.innerHTML = song.title;
+songArtist.innerHTML = song.artist;
 
-    songTitle.innerHTML = song.name;
-    songArtist.innerHTML = song.artist;
-
-    miniTitle.innerHTML = song.name;
-    miniArtist.innerHTML = song.artist;
+miniTitle.innerHTML = song.title;
+miniArtist.innerHTML = song.artist;
 
 
-    albumImages.forEach(img=>{
-        img.src = song.image;
-    });
+    // albumImages.forEach(img=>{
+//     img.src = song.image;
+// });
 
 
     audio.src = song.file;
