@@ -200,7 +200,6 @@ function filterSongs(searchText){
     });
 
 }
-
 function playSelectedSong(index){
 
     currentSong = index;
