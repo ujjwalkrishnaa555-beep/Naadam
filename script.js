@@ -62,7 +62,15 @@ const duration = document.querySelector(".time span:last-child");
 
 // Load Song
 function createSongCards(){
+function playSelectedSong(index){
 
+    currentSong = index;
+
+    loadSong();
+
+    playSong();
+
+}
     const container = document.getElementById("songCards");
 
     container.innerHTML = "";
