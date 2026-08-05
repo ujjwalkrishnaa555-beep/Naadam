@@ -1,4 +1,4 @@
-# Naadam
+# Naadam music
 Free royalty-free music streaming website.
 
 What it is
