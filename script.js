@@ -168,8 +168,10 @@ const miniImage = document.querySelector(".mini-player img");
 function filterSongs(searchText){
 
     const container = document.getElementById("songCards");
+const results = document.getElementById("searchResults");
 
-    container.innerHTML = "";
+container.innerHTML = "";
+results.innerHTML = "";
 
     const filteredSongs = songs.filter(song =>
         song.title.toLowerCase().includes(searchText.toLowerCase()) ||
