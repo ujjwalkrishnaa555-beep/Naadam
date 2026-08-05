@@ -37,7 +37,12 @@ header p{
     color:#aaa;
     margin-top:8px;
 }
-
+.logo{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    object-fit:contain;
+}
 
 
 /* Search */
