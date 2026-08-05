@@ -383,12 +383,11 @@ document.getElementById("close-player")
 
 // Start
 
-loadSong();
+window.onload = () => {
+    loadSong();
+    filterSongs("");
 
-filterSongs("");
-
-searchInput.addEventListener("input", () => {
-    filterSongs(searchInput.value);
-});
-
-    
+    searchInput.addEventListener("input", (e) => {
+        filterSongs(e.target.value);
+    });
+};
