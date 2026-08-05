@@ -99,7 +99,7 @@ image:"images/Pottala-Muttaye.jpg"
 
 {
 title:"Malare",
-artist:"Vijay Yesudas",
+artist:"Rajesh Murugesan",
 file:"songs/Premam_Malare_Video_Song___Rajesh_Murugesan___Vijay_Yesudas___Nivin_Pauly___Sai_Pallavi(256k).mp3",
 image:"images/Premam.jpg"
 },
