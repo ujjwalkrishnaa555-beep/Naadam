@@ -73,9 +73,9 @@ miniTitle.innerHTML = song.title;
 miniArtist.innerHTML = song.artist;
 
 
-    // albumImages.forEach(img=>{
-//     img.src = song.image;
-// });
+    albumImages.forEach(img=>{
+    img.src = song.image;
+});
 
 
     audio.src = encodeURI(song.file);
