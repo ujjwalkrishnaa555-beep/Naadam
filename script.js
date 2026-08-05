@@ -212,22 +212,30 @@ function playSelectedSong(index){
 function loadSong(){
 
     let song = songs[currentSong];
-    
- songTitle.innerHTML = song.title;
-songArtist.innerHTML = song.artist;
 
-miniTitle.innerHTML = song.title;
-miniArtist.innerHTML = song.artist;
+    // Song Details
+    songTitle.textContent = song.title;
+    songArtist.textContent = song.artist;
 
+    // Mini Player
+    miniTitle.textContent = song.title;
+    miniArtist.textContent = song.artist;
 
-    albumImages.forEach(img=>{
-    img.src = song.image;
-});
-miniImage.src = song.image;
+    // Album Images
+    albumImages.forEach(img => {
+        img.src = song.image;
+    });
 
+    miniImage.src = song.image;
+
+    // Load Audio
     audio.src = encodeURI(song.file);
-audio.load();
+    audio.load();
 
+    // Reset Progress
+    progress.value = 0;
+    currentTime.textContent = "0:00";
+    duration.textContent = "0:00";
 }
 
 
