@@ -72,13 +72,22 @@ function filterSongs(searchText){
         song.artist.toLowerCase().includes(searchText.toLowerCase())
     );
 
-    filteredSongs.forEach(song => {
+    if(filteredSongs.length === 0){
+        container.innerHTML = `
+            <p style="text-align:center;color:#888;padding:20px;">
+                No songs found
+            </p>
+        `;
+        return;
+    }
+
+    filteredSongs.forEach(song=>{
 
         const index = songs.indexOf(song);
 
         container.innerHTML += `
         <div class="song-card" onclick="playSelectedSong(${index})">
-            <img src="${song.image}">
+            <img src="${song.image}" alt="${song.title}">
             <div>
                 <h4>${song.title}</h4>
                 <p>${song.artist}</p>
