@@ -26,7 +26,117 @@ artist:"Neha Nair",
 file:"songs/Kaadhal_Ponmaan_Video_I_Night_Riders___Mathew_I_Meenakshi___Neha_Nair__Vishnu_Vijay__Yakzan__Vinayak(256k).mp3",
 image:"images/kaadhal.jpg"
 }
+{
+title:"Amsham",
+artist:"Aksomaniac, M.H.R, Bhumi",
+file:"songs/Aksomaniac_-_Amsham_ft._M.H.R,_Bhumi,_Circle_Tone__Official_Music_Video_(256k).mp3",
+image:"images/Amsham.jpg"
+},
 
+{
+title:"Pularan Neram",
+artist:"Bijibal",
+file:"songs/Android_Kunjappan_Version_5.25___Pularan_Neram_-_Video_Song___Ratheesh_Balakrishnan_Poduval(256k).mp3",
+image:"images/Pularan neram.jpg"
+},
+
+{
+title:"Chingari Aadu",
+artist:"Jayachandran, Vijay Yesudas",
+file:"songs/Chingari_Aadu___Aadu_Title_Song_HD_-_Jayasurya,Vijay_Babu,Sandra_Thomas(256k).mp3",
+image:"images/Aadu-Original-Motion-Picture-Soundtrack-Malayalam-2015-20250718145229-500x500.jpg"
+},
+
+{
+title:"Engotta",
+artist:"Sushin Shyam",
+file:"songs/Engotta_-_Balan_The_Boy___Sushin_Shyam___Anvar_Ali___Chidambaram(256k).mp3",
+image:"images/Engotta.jpg"
+},
+
+{
+title:"KALYANI",
+artist:"Shreya Ghoshal",
+file:"songs/KALYANI__with_Shreya_Ghoshal__OFFICIAL_MUSIC_VIDEO___ARJN___KDS___FIFTY4___RONN___SHREYA_GHOSHAL(256k).mp3",
+image:"images/KALYANI.jpg"
+},
+
+{
+title:"Kaadhal Ponmaan",
+artist:"Neha Nair",
+file:"songs/Kaadhal_Ponmaan_Video_I_Night_Riders___Mathew_I_Meenakshi___Neha_Nair__Vishnu_Vijay__Yakzan__Vinayak(256k).mp3",
+image:"images/kannod-Jobkurian.jpg"
+},
+
+{
+title:"Kunjikkavil Meghame",
+artist:"Vineeth Sreenivasan",
+file:"songs/Kunjikkavil_Meghame__From__Aashaan__(256k).mp3",
+image:"images/Kunjikkavil-meghame.jpg"
+},
+
+{
+title:"Local Gen Z Anthem",
+artist:"Local Gen Z",
+file:"songs/Local_Gen_-_Z_Anthem(256k).mp3",
+image:"images/Local gen z anthem.jpg"
+},
+
+{
+title:"Ninte Pinnale",
+artist:"Karthik",
+file:"songs/Ninte_Pinnale(256k).mp3",
+image:"images/ninta pinnale.jpg"
+},
+
+{
+title:"Panjara Punch",
+artist:"Santhosh Narayanan",
+file:"songs/Panjara_Punch(256k).mp3",
+image:"images/pajara punch.jpg"
+},
+
+{
+title:"Pottala Muttaye",
+artist:"Santhosh Narayanan",
+file:"songs/Pottala_Muttaye___Thalaivan_Thalaivii___Vijay_Sethupathi,Nithya_Menen__Pandiraaj__Santhosh_Narayanan(256k).mp3",
+image:"images/Pottala Muttaye.jpg"
+},
+
+{
+title:"Malare",
+artist:"Vijay Yesudas",
+file:"songs/Premam_Malare_Video_Song___Rajesh_Murugesan___Vijay_Yesudas___Nivin_Pauly___Sai_Pallavi(256k).mp3",
+image:"images/premam.jpg"
+},
+
+{
+title:"Thaakkol",
+artist:"Sushin Shyam",
+file:"songs/Thaakkol_-_Balan__The_Boy___Sushin_Shyam___Nila_Raj___Anvar_Ali___New_Malayalam_Song(256k).mp3",
+image:"images/Thaakol.jpg"
+},
+
+{
+title:"Ullasa Gaayike",
+artist:"Shaan Rahman",
+file:"songs/Ullasa_Gaayike___Adi_Kapyare_Koottamani___Video___Shaan_Rahman____Manu_Manjith___Dhyan_Sreenivasan(256k).mp3",
+image:"images/ulasa gayike.jpg"
+},
+
+{
+title:"Nenjukkul Peidhidum",
+artist:"Hariharan, Devan Ekambaram, V.V. Prassanna",
+file:"songs/Vaaranam_Aayiram_-_Nenjukkul_Peidhidum_Video_Song___Harris_Jayaraj___Suriya,_Sameera_Reddy,(256k).mp3",
+image:"images/Nejukkul-peidhidum.jpg"
+},
+
+{
+title:"Veera Raja Veera",
+artist:"A.R. Rahman",
+file:"songs/Veera_Raja_Veera_-_Full_Video___PS2_Tamil___@ARRahman___Mani_Ratnam___Jayam_Ravi,_Sobhita_Dhulipala(256k).mp3",
+image:"images/Ps-2.jpg"
+}
 ];
 
 
