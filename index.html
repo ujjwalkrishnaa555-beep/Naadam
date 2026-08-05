@@ -318,12 +318,34 @@
 <script type="module">
   // Firebase code ഇവിടെ ഇടുക
 </script>
+<!-- Firebase -->
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "naadam-music.firebaseapp.com",
+  projectId: "naadam-music",
+  storageBucket: "naadam-music.firebasestorage.app",
+  messagingSenderId: "478937536894",
+  appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+
+window.storage = getStorage(app);
+window.db = getFirestore(app);
+
+</script>
 
 
 <!-- Your JavaScript -->
 <script src="script.js"></script>
 
-<script src="script.js"></script>
+
 
 
 </body>
