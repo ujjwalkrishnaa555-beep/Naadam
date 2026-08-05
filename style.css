@@ -381,3 +381,169 @@ section h3{
     display:block;
 
 }
+/* Full Player Screen */
+
+.player-screen{
+
+    position:fixed;
+    inset:0;
+
+    background:#050505;
+
+    z-index:2000;
+
+    display:none;
+
+    padding:25px;
+
+}
+
+
+.player-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.player-header i{
+
+    font-size:22px;
+    color:#FF8C00;
+
+}
+
+
+
+.album-area{
+
+    margin-top:50px;
+
+    display:flex;
+    justify-content:center;
+
+}
+
+
+.album-area img{
+
+    width:300px;
+    height:300px;
+
+    border-radius:25px;
+
+    object-fit:cover;
+
+}
+
+
+
+.song-info{
+
+    text-align:center;
+
+    margin-top:35px;
+
+}
+
+
+.song-info p{
+
+    color:#888;
+
+}
+
+
+
+.progress-area{
+
+    margin-top:40px;
+
+}
+
+
+.progress-area input{
+
+    width:100%;
+
+    accent-color:#FF8C00;
+
+}
+
+
+
+.time{
+
+    display:flex;
+    justify-content:space-between;
+
+    color:#888;
+
+    font-size:13px;
+
+}
+
+
+
+.controls{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+}
+
+
+.controls i{
+
+    font-size:22px;
+
+}
+
+
+
+.main-play{
+
+    width:65px;
+    height:65px;
+
+    background:#FF8C00;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+.main-play i{
+
+    color:black;
+    font-size:28px;
+
+}
+
+
+
+.extra-controls{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    color:#FF8C00;
+
+}
