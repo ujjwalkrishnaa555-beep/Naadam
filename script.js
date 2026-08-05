@@ -9,19 +9,19 @@ const songs = [
     {
         title: "Vaa Senthaazhini",
         artist: "G.V. Prakash Kumar",
-        file: "songs/Vaa Senthaazhini.mp3"
+        file: "songs/Vaa_Senthaazhini_Lyric_Video___Adiyae___G.V.Prakash_Kumar,_Gouri_Kishan__Justin_Prabhakaran__Vignesh(256k).mp3"
     },
 
     {
         title: "Idhuvum Kadandhu Pogum (Reprise)",
         artist: "Girishh",
-        file: "songs/Idhuvum Kadandhu Pogum Reprise.mp3"
+        file: "songs/Netrikann_-_Idhuvum_Kadandhu_Pogum_Reprise_Lyric___Nayanthara___Vignesh_Shivan___MilindRau,_Girishh(256k).mp3"
     },
 
     {
         title: "Kaadhal Ponmaan",
         artist: "Neha Nair",
-        file: "songs/Kaadhal Ponmaan.mp3"
+        file: "songs/Kaadhal_Ponmaan_Video_I_Night_Riders___Mathew_I_Meenakshi___Neha_Nair__Vishnu_Vijay__Yakzan__Vinayak(256k).mp3"
     }
 ];
 
