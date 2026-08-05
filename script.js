@@ -384,8 +384,11 @@ document.getElementById("close-player")
 // Start
 
 loadSong();
-function createSongCards(){
 
-    filterSongs("");
+filterSongs("");
+
+searchInput.addEventListener("input", () => {
+    filterSongs(searchInput.value);
+});
 
     
