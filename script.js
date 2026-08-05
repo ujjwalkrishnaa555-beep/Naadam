@@ -1,61 +1,69 @@
-const playBtn = document.querySelector(".mini-player i");
+// Elements
 
-let playing = false;
+const menuBtn = document.getElementById("menu-btn");
+const sideMenu = document.querySelector(".side-menu");
+const overlay = document.querySelector(".overlay");
+
+const playerBtn = document.getElementById("player-btn");
+const playerScreen = document.querySelector(".player-screen");
+const closePlayer = document.getElementById("close-player");
 
 
-// Play / Pause
+// Open Side Menu
 
-playBtn.addEventListener("click",()=>{
+menuBtn.addEventListener("click", () => {
 
-    if(playing){
-
-        playBtn.classList.remove("fa-pause");
-        playBtn.classList.add("fa-play");
-
-        playing = false;
-
-    }else{
-
-        playBtn.classList.remove("fa-play");
-        playBtn.classList.add("fa-pause");
-
-        playing = true;
-
-    }
+    sideMenu.classList.add("active");
+    overlay.classList.add("active");
 
 });
 
 
+// Close Side Menu
 
-// Bottom Navigation Active
+overlay.addEventListener("click", () => {
 
-const navItems = document.querySelectorAll(".bottom-nav a");
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+
+    playerScreen.classList.remove("active");
+
+});
 
 
-navItems.forEach(item=>{
+// Open Full Player
 
-    item.addEventListener("click",()=>{
+playerBtn.addEventListener("click", () => {
 
-        navItems.forEach(nav=>{
-            nav.classList.remove("active");
+    playerScreen.classList.add("active");
+
+});
+
+
+// Close Full Player
+
+closePlayer.addEventListener("click", () => {
+
+    playerScreen.classList.remove("active");
+
+});
+
+
+// Bottom Navigation Active Change
+
+const navLinks = document.querySelectorAll(".bottom-nav a");
+
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.forEach(item => {
+            item.classList.remove("active");
         });
 
-
-        item.classList.add("active");
+        link.classList.add("active");
 
     });
-
-});
-
-
-
-// Menu Button
-
-const menu = document.querySelector(".fa-bars");
-
-
-menu.addEventListener("click",()=>{
-
-    alert("Naadam Menu Coming Soon 🎧");
 
 });
