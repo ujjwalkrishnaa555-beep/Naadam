@@ -481,35 +481,43 @@ section h3{
 
 #songCards{
     display:flex;
-    flex-direction:column;
-    gap:12px;
+    flex-direction:row;
+    gap:15px;
+    overflow-x:auto;
 }
+
+#songCards::-webkit-scrollbar{
+    display:none;
+}
+
 
 .song-card{
-    display:flex;
-    align-items:center;
-    gap:12px;
+    min-width:160px;
     background:#181818;
-    padding:10px;
-    border-radius:12px;
-    cursor:pointer;
+    padding:12px;
+    border-radius:18px;
 }
 
+
 .song-card img{
-    width:60px;
-    height:60px;
-    border-radius:10px;
+    width:160px;
+    height:160px;
+    border-radius:15px;
     object-fit:cover;
 }
+
 
 .song-card h4{
     color:#fff;
     font-size:16px;
+    margin-top:10px;
 }
+
 
 .song-card p{
     color:#aaa;
     font-size:13px;
+}
 }
 /* ===============================
    Premium Search Animation
