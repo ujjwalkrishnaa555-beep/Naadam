@@ -62,15 +62,8 @@ const duration = document.querySelector(".time span:last-child");
 
 // Load Song
 function createSongCards(){
-function playSelectedSong(index){
+function createSongCards(){
 
-    currentSong = index;
-
-    loadSong();
-createSongCards();
-    playSong();
-
-}
     const container = document.getElementById("songCards");
 
     container.innerHTML = "";
@@ -79,18 +72,23 @@ createSongCards();
 
         container.innerHTML += `
         <div class="song-card" onclick="playSelectedSong(${index})">
-
             <img src="${song.image}">
-
             <div>
                 <h4>${song.title}</h4>
                 <p>${song.artist}</p>
             </div>
-
         </div>
         `;
-
     });
+}
+
+function playSelectedSong(index){
+
+    currentSong = index;
+
+    loadSong();
+
+    playSong();
 
 }
 function loadSong(){
