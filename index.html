@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,97 +15,171 @@
 
 </head>
 
+
 <body>
 
+
 <!-- Header -->
+
 <header>
-    <div class="top">
-        <i class="fa-solid fa-bars" id="menu-btn"></i>
 
-        <h2>Naadam</h2>
+<div class="top">
 
-        <i class="fa-solid fa-bell"></i>
-    </div>
+<i class="fa-solid fa-bars" id="menu-btn"></i>
 
-    <p>Feel Every Beat 🎵</p>
+<h2>Naadam</h2>
+
+<i class="fa-solid fa-bell"></i>
+
+</div>
+
+<p>Feel Every Beat 🎵</p>
+
 </header>
 
 
+
 <!-- Search -->
+
 <div class="search-box">
-    <i class="fa-solid fa-search"></i>
-    <input type="text" placeholder="Search songs, artists...">
+
+<i class="fa-solid fa-search"></i>
+
+<input type="text" placeholder="Search songs, artists...">
+
 </div>
+
 
 <div id="searchResults" class="search-results"></div>
 
-<!-- Trending -->
-<section>
-<!-- Trending -->
-<section>
 
-<h3>🔥 Trending Now</h3>
-<section id="trendingSection">
-<div class="cards">
 
-    <div class="music-card" onclick="playSelectedSong(0)">
-        <img src="images/vaa.jpg" alt="Vaa Senthaazhini">
-        <p>Vaa Senthaazhini</p>
-        <span>G.V. Prakash Kumar</span>
-    </div>
+<!-- Songs -->
 
-    <div class="music-card" onclick="playSelectedSong(1)">
-        <img src="images/idhuvum.jpg" alt="Idhuvum Kadandhu Pogum">
-        <p>Idhuvum Kadandhu Pogum</p>
-        <span>Girishh</span>
-    </div>
+<section class="song-list">
 
-    <div class="music-card" onclick="playSelectedSong(2)">
-        <img src="images/kaadhal.jpg" alt="Kaadhal Ponmaan">
-        <p>Kaadhal Ponmaan</p>
-        <span>Neha Nair</span>
-    </div>
+<h3>🎵 Songs</h3>
+
+
+<div id="songCards">
+
 
 </div>
 
+
 </section>
+
+
 
 
 
 <!-- Made For You -->
-<section>
-<section id="madeForYouSection">
-<h3>🎧 Made For You</h3>
-<section class="song-list">
-    <h3>🎵 Songs</h3>
 
-    <div id="songCards"></div>
-</section>
+<section id="madeForYouSection">
+
+
+<h3>🎧 Made For You</h3>
+
+
 <div class="playlist">
+
 
 <div>
 🎵 Chill Vibes
 </div>
 
+
 <div>
 🔥 Workout Mix
 </div>
+
 
 <div>
 🌙 Night Songs
 </div>
 
+
+<div>
+💙 Relax Songs
 </div>
+
+
+</div>
+
 
 </section>
 
 
 
+
+
+<!-- Trending -->
+
+<section id="trendingSection">
+
+
+<h3>🔥 Trending Now</h3>
+
+
+<div class="cards">
+
+
+<div class="music-card" onclick="playSelectedSong(0)">
+
+<img src="images/vaa.jpg">
+
+<p>Vaa Senthaazhini</p>
+
+<span>G.V. Prakash Kumar</span>
+
+</div>
+
+
+
+<div class="music-card" onclick="playSelectedSong(1)">
+
+<img src="images/idhuvum.jpg">
+
+<p>Idhuvum Kadandhu Pogum</p>
+
+<span>Girishh</span>
+
+</div>
+
+
+
+<div class="music-card" onclick="playSelectedSong(2)">
+
+<img src="images/kaadhal.jpg">
+
+<p>Kaadhal Ponmaan</p>
+
+<span>Neha Nair</span>
+
+</div>
+
+
+<div class="music-card">
+
+<img src="images/song4.jpg">
+
+<p>Trending Song</p>
+
+<span>Artist</span>
+
+</div>
+
+
+</div>
+
+
+</section>
 <!-- Mini Player -->
 
 <div class="mini-player">
 
 <img src="images/vaa.jpg" alt="Album">
+
 <div>
 <p>Song Name</p>
 <span>Artist</span>
@@ -116,213 +191,287 @@
 
 
 
+
+
 <!-- Bottom Navigation -->
 
 <nav class="bottom-nav">
 
+
 <a class="active">
+
 <i class="fa-solid fa-house"></i>
 <span>Home</span>
+
 </a>
 
 
+
 <a>
+
 <i class="fa-solid fa-magnifying-glass"></i>
 <span>Search</span>
+
 </a>
 
 
+
 <a>
+
 <i class="fa-solid fa-music"></i>
 <span>Library</span>
+
 </a>
 
 
+
 <a>
+
 <i class="fa-solid fa-heart"></i>
 <span>Like</span>
+
 </a>
 
 
+
 <a>
+
 <i class="fa-solid fa-user"></i>
 <span>Profile</span>
+
 </a>
 
 
 </nav>
 
 
+
+
+
 <!-- Side Menu -->
 
 <div class="side-menu">
 
-    <div class="profile">
 
-        <div class="avatar">
-            <i class="fa-solid fa-user"></i>
-        </div>
+<div class="profile">
 
-        <h3>Welcome to Naadam</h3>
+<div class="avatar">
 
-        <button>
-            Sign In
-        </button>
-
-    </div>
-
-
-    <div class="menu-list">
-
-        <a href="#">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-        </a>
-
-
-        <a href="#">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span>Search</span>
-        </a>
-
-
-        <a href="#">
-            <i class="fa-solid fa-music"></i>
-            <span>Library</span>
-        </a>
-
-
-        <a href="#">
-            <i class="fa-solid fa-heart"></i>
-            <span>Favorites</span>
-        </a>
-
-
-        <a href="#">
-            <i class="fa-solid fa-download"></i>
-            <span>Downloads</span>
-        </a>
-
-
-        <a href="#" class="premium">
-            <i class="fa-solid fa-crown"></i>
-            <span>Premium</span>
-        </a>
-
-    </div>
-
-
-
-    <div class="bottom-menu">
-
-        <a href="#">
-            <i class="fa-solid fa-gear"></i>
-            <span>Settings</span>
-        </a>
-
-
-        <a href="#">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>About Naadam</span>
-        </a>
-
-    </div>
+<i class="fa-solid fa-user"></i>
 
 </div>
-<!-- Full Player Screen -->
+
+
+<h3>Welcome to Naadam</h3>
+
+
+<button>
+Sign In
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="menu-list">
+
+
+<a href="#">
+<i class="fa-solid fa-house"></i>
+<span>Home</span>
+</a>
+
+
+
+<a href="#">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span>Search</span>
+</a>
+
+
+
+<a href="#">
+<i class="fa-solid fa-music"></i>
+<span>Library</span>
+</a>
+
+
+
+<a href="#">
+<i class="fa-solid fa-heart"></i>
+<span>Favorites</span>
+</a>
+
+
+
+<a href="#">
+<i class="fa-solid fa-download"></i>
+<span>Downloads</span>
+</a>
+
+
+
+<a href="#" class="premium">
+
+<i class="fa-solid fa-crown"></i>
+<span>Premium</span>
+
+</a>
+
+
+</div>
+
+
+
+
+<div class="bottom-menu">
+
+
+<a href="#">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+
+
+<a href="#">
+<i class="fa-solid fa-circle-info"></i>
+<span>About Naadam</span>
+</a>
+
+
+</div>
+
+
+</div>
+    <!-- Full Player Screen -->
 
 <div class="player-screen">
 
-    <div class="player-header">
 
-        <i class="fa-solid fa-chevron-down" id="close-player"></i>
+<div class="player-header">
 
-        <h3>Now Playing</h3>
+<i class="fa-solid fa-chevron-down" id="close-player"></i>
 
-        <i class="fa-solid fa-ellipsis"></i>
+<h3>Now Playing</h3>
 
-    </div>
+<i class="fa-solid fa-ellipsis"></i>
+
+</div>
+
 
 
 <!-- Album Cover -->
+
 <div class="album-area">
-    <img src="images/song1.jpg" alt="Album">
+
+<img src="images/vaa.jpg" alt="Album">
+
 </div>
 
 
 
-    <!-- Song Details -->
 
-    <div class="song-info">
+<!-- Song Info -->
 
-        <h2>Song Name</h2>
+<div class="song-info">
 
-        <p>Artist Name</p>
+<h2>Song Name</h2>
 
-    </div>
+<p>Artist Name</p>
+
+</div>
+
+
+
 
 
 <!-- Progress -->
+
 <div class="progress-area">
 
-    <input type="range" min="0" max="100" value="0">
+<input type="range" min="0" max="100" value="0">
 
-    <div class="time">
-        <span>0:00</span>
-        <span>0:00</span>
-    </div>
+
+<div class="time">
+
+<span>0:00</span>
+
+<span>0:00</span>
+
+</div>
+
 
 </div>
 
 
-    <!-- Main Controls -->
-
-    <div class="controls">
-
-        <i class="fa-solid fa-shuffle"></i>
-
-        <i class="fa-solid fa-backward-step"></i>
 
 
-        <div class="main-play">
 
-            <i class="fa-solid fa-play"></i>
+<!-- Controls -->
 
-        </div>
-
-
-        <i class="fa-solid fa-forward-step"></i>
-
-        <i class="fa-solid fa-repeat"></i>
-
-    </div>
+<div class="controls">
 
 
-    <!-- Extra Options -->
+<i class="fa-solid fa-shuffle"></i>
 
-    <div class="extra-controls">
 
-        <i class="fa-solid fa-heart"></i>
+<i class="fa-solid fa-backward-step"></i>
 
-        <i class="fa-solid fa-download"></i>
 
-        <i class="fa-solid fa-list"></i>
 
-    </div>
+<div class="main-play">
+
+<i class="fa-solid fa-play"></i>
+
+</div>
+
+
+
+<i class="fa-solid fa-forward-step"></i>
+
+
+<i class="fa-solid fa-repeat"></i>
+
 
 
 </div>
+
+
+
+
+
+<!-- Extra Controls -->
+
+<div class="extra-controls">
+
+<i class="fa-solid fa-heart"></i>
+
+<i class="fa-solid fa-download"></i>
+
+<i class="fa-solid fa-list"></i>
+
+</div>
+
+
+
+</div>
+
+
+
 
 <!-- Overlay -->
 
 <div class="overlay"></div>
 
 
-<!-- Your JavaScript -->
+
+
 <script src="script.js"></script>
 
 
-
 </body>
-</html>
 
+    </html>
