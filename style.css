@@ -1,377 +1,114 @@
-/* ==========================
-   NAADAM v2 - STYLE PART 1
-========================== */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
     background:#0D0D0D;
     color:#fff;
-    overflow-x:hidden;
+    padding:20px;
+    padding-bottom:120px;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-.navbar{
-    position:sticky;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 30px;
-    background:#111;
-    border-bottom:1px solid #222;
-    z-index:999;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+header h2{
+    color:#FF8C00;
     font-size:28px;
     font-weight:700;
-    color:#ff7a00;
 }
 
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:28px;
-}
-
-.nav-links a{
-    color:#ddd;
-    transition:.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active{
-    color:#ff7a00;
-}
-
-.profile{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:#ff7a00;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-}
-
-.hero{
-    min-height:70vh;
-    display:flex;
-    align-items:center;
-    padding:60px;
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8));
-}
-
-.hero-content{
-    max-width:600px;
-}
-
-.hero h1{
-    font-size:60px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    color:#bfbfbf;
-    line-height:1.8;
-    margin-bottom:30px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
-}
-
-.play-btn{
-    background:#ff7a00;
-    color:#fff;
-    border:none;
-    padding:14px 30px;
-    border-radius:50px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.play-btn:hover{
-    transform:scale(1.05);
-}
-
-.browse-btn{
-    background:#222;
-    color:#fff;
-    border:none;
-    padding:14px 30px;
-    border-radius:50px;
-    cursor:pointer;
-}
-
-.browse-btn:hover{
-    background:#333;
-}          
-/* ==========================
-   NAADAM v2 - STYLE PART 2
-========================== */
-
-/* Search */
-
-.search-section{
-    padding:30px;
-}
-
-.search-box{
-    max-width:700px;
-    margin:auto;
-    background:#1A1A1A;
-    border-radius:50px;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.search-box i{
-    color:#FF7A00;
-    font-size:18px;
-}
-
-.search-box input{
-    flex:1;
-    border:none;
-    outline:none;
-    background:transparent;
-    color:#fff;
-    font-size:16px;
-}
-
-.search-box input::placeholder{
-    color:#888;
-}
-
-/* Sections */
-
-.section{
-    padding:40px 30px;
-}
-
-.section-title{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+header p{
+    color:#bbb;
+    margin-top:5px;
     margin-bottom:20px;
 }
 
-.section-title h2{
-    font-size:28px;
+.search-box{
+    background:#1A1A1A;
+    border-radius:15px;
+    padding:12px 15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:25px;
 }
 
-.section-title a{
-    color:#FF7A00;
-}
-
-/* Cards */
-
-.card-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-}
-
-.music-card{
-    background:#181818;
-    border-radius:18px;
-    padding:15px;
-    transition:.3s;
-    cursor:pointer;
-}
-
-.music-card:hover{
-    transform:translateY(-8px);
-    background:#222;
-}
-
-.music-card img{
+.search-box input{
+    background:none;
+    border:none;
+    outline:none;
+    color:white;
     width:100%;
-    aspect-ratio:1;
-    object-fit:cover;
-    border-radius:14px;
+    font-size:16px;
+}
+
+section{
+    margin-bottom:25px;
+}
+
+section h3{
     margin-bottom:12px;
 }
 
-.music-card h3{
-    font-size:18px;
-    margin-bottom:6px;
+.card-row{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
 }
 
-.music-card p{
-    color:#999;
-    font-size:14px;
+.card{
+    min-width:140px;
+    height:140px;
+    background:#1A1A1A;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#FF8C00;
+    font-weight:600;
 }
-
-/* Mini Player */
 
 .mini-player{
     position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#111;
-    border-top:1px solid #333;
-    padding:12px 20px;
+    left:10px;
+    right:10px;
+    bottom:75px;
+    background:#FF8C00;
+    color:#fff;
+    border-radius:18px;
+    padding:15px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    font-weight:600;
 }
 
-.song-info{
+.bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:65px;
+    background:#151515;
     display:flex;
+    justify-content:space-around;
     align-items:center;
-    gap:12px;
+    border-top:1px solid #333;
 }
 
-.song-info img{
-    width:55px;
-    height:55px;
-    border-radius:10px;
-    object-fit:cover;
-}
-
-.song-info h4{
-    font-size:15px;
-}
-
-.song-info p{
+.bottom-nav a{
     color:#888;
-    font-size:13px;
+    text-decoration:none;
+    text-align:center;
+    font-size:12px;
 }
 
-.player-controls{
-    display:flex;
-    gap:22px;
-    align-items:center;
+.bottom-nav a.active{
+    color:#FF8C00;
 }
 
-.player-controls i{
-    font-size:22px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.player-controls i:hover{
-    color:#FF7A00;
-}
-
-.play-icon{
-    font-size:38px !important;
-    color:#FF7A00;
-}
-/* ==========================
-   NAADAM v2 - STYLE PART 3
-========================== */
-
-/* Responsive */
-
-@media (max-width:768px){
-
-    .navbar{
-        padding:15px;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero{
-        min-height:55vh;
-        padding:30px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero p{
-        font-size:14px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .card-container{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .section-title h2{
-        font-size:22px;
-    }
-
-    .mini-player{
-        padding:10px;
-    }
-
-    .song-info img{
-        width:45px;
-        height:45px;
-    }
-
-    .player-controls{
-        gap:15px;
-    }
-
-    .play-icon{
-        font-size:32px !important;
-    }
-}
-
-/* Scrollbar */
-
-::-webkit-scrollbar{
-    width:8px;
-}
-
-::-webkit-scrollbar-track{
-    background:#111;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#ff7a00;
-    border-radius:10px;
-}
-
-/* Smooth Animation */
-
-.music-card,
-.play-btn,
-.browse-btn,
-.profile,
-.nav-links a{
-    transition:all .3s ease;
-}
-.progress-container{
-    width:35%;
-}
-
-#progress{
-    width:100%;
-    accent-color:#FF7A00;
-    cursor:pointer;
+.bottom-nav i{
+    font-size:20px;
+    margin-bottom:4px;
 }
