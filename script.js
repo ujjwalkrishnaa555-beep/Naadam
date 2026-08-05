@@ -378,3 +378,4 @@ document.getElementById("close-player")
 // Start
 
 loadSong();
+createSongCards();
