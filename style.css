@@ -444,3 +444,34 @@ section h3{
     color:white;
     font-weight:600;
 }
+/* V2 Improvements */
+
+#menu-btn,
+#close-player,
+.mini-player,
+.controls i,
+.extra-controls i{
+    cursor:pointer;
+}
+
+.main-play i{
+    color:#111;
+    font-size:28px;
+}
+
+/* Smooth scrolling */
+.player-screen{
+    overflow-y:auto;
+}
+
+/* Hide horizontal scrollbar */
+.cards,
+.playlist{
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.cards::-webkit-scrollbar,
+.playlist::-webkit-scrollbar{
+    display:none;
+}
