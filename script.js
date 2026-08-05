@@ -168,10 +168,18 @@ const miniImage = document.querySelector(".mini-player img");
 function filterSongs(searchText){
 
     const container = document.getElementById("songCards");
-const results = document.getElementById("searchResults");
+    const trending = document.getElementById("trendingSection");
+    const madeForYou = document.getElementById("madeForYouSection");
 
-container.innerHTML = "";
-results.innerHTML = "";
+    container.innerHTML = "";
+
+    if(searchText.trim() !== ""){
+        trending.classList.add("hide");
+        madeForYou.classList.add("hide");
+    }else{
+        trending.classList.remove("hide");
+        madeForYou.classList.remove("hide");
+    }
 
     const filteredSongs = songs.filter(song =>
         song.title.toLowerCase().includes(searchText.toLowerCase()) ||
@@ -180,10 +188,10 @@ results.innerHTML = "";
 
     if(filteredSongs.length === 0){
         container.innerHTML = `
-            <p style="text-align:center;color:#888;padding:20px;">
-                No songs found
-            </p>
-        `;
+        <div style="text-align:center;padding:30px;color:#888;">
+            <h3>😔 No Songs Found</h3>
+            <p>Try another song or artist.</p>
+        </div>`;
         return;
     }
 
@@ -193,14 +201,13 @@ results.innerHTML = "";
 
         container.innerHTML += `
         <div class="song-card" onclick="playSelectedSong(${index})">
-            <img src="${song.image}" alt="${song.title}">
+            <img src="${song.image}">
             <div>
                 <h4>${song.title}</h4>
                 <p>${song.artist}</p>
             </div>
         </div>`;
     });
-
 }
 function playSelectedSong(index){
 
