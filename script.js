@@ -59,7 +59,7 @@ const currentTime = document.querySelector(".time span:first-child");
 const duration = document.querySelector(".time span:last-child");
 
 const searchInput = document.querySelector(".search-box input");
-
+const miniImage = document.querySelector(".mini-player img");
 // Load Song
 function filterSongs(searchText){
 
@@ -120,7 +120,7 @@ miniArtist.innerHTML = song.artist;
     albumImages.forEach(img=>{
     img.src = song.image;
 });
-
+miniImage.src = song.image;
 
     audio.src = encodeURI(song.file);
 audio.load();
