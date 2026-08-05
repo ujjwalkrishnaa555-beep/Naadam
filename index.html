@@ -1,219 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naadam - Feel Every Beat</title>
+<nav class="bottom-nav">
+    <a href="#" class="active">
+        <i class="fas fa-house"></i>
+        <span>Home</span>
+    </a>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <a href="#">
+        <i class="fas fa-magnifying-glass"></i>
+        <span>Search</span>
+    </a>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <a href="#">
+        <i class="fas fa-compass"></i>
+        <span>Explore</span>
+    </a>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <a href="#">
+        <i class="fas fa-book-open"></i>
+        <span>Library</span>
+    </a>
 
-<body>
-
-<header>
-
-<nav class="navbar">
-
-<div class="logo">
-<i class="fa-solid fa-music"></i>
-<span>Naadam</span>
-</div>
-
-<ul class="nav-links">
-<li><a href="#" class="active">Home</a></li>
-<li><a href="#">Search</a></li>
-<li><a href="#">Library</a></li>
-<li><a href="#">Premium</a></li>
-</ul>
-
-<div class="profile">
-<i class="fa-solid fa-user"></i>
-</div>
-
+    <a href="#">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+    </a>
 </nav>
-
-</header>
-
-
-<!-- HERO SECTION -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Feel Every Beat</h1>
-
-<p>
-Discover Malayalam, Tamil, Hindi,
-English and global music in one place.
-</p>
-
-<div class="hero-buttons">
-
-<button class="play-btn">
-<i class="fa-solid fa-play"></i>
-Play Now
-</button>
-
-<button class="browse-btn">
-Browse Music
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SEARCH -->
-
-<section class="search-section">
-
-<div class="search-box">
-
-<i class="fa-solid fa-magnifying-glass"></i>
-
-<input
-type="text"
-placeholder="Search songs, artists or albums">
-
-</div>
-
-</section>
-
-
-<!-- TRENDING SECTION -->
-
-<section class="section">
-
-<div class="section-title">
-
-<h2>🔥 Trending Now</h2>
-
-<a href="#">See All</a>
-
-</div>
-
-<div class="card-container">
-    <!-- Trending Card 1 -->
-    <div class="music-card">
-        <img src="assets/albums/song1.jpg" alt="Album">
-        <h3>Malayalam Hits</h3>
-        <p>Top Trending Songs</p>
-    </div>
-
-    <!-- Trending Card 2 -->
-    <div class="music-card">
-        <img src="assets/albums/song2.jpg" alt="Album">
-        <h3>Tamil Vibes</h3>
-        <p>Latest Tamil Hits</p>
-    </div>
-
-    <!-- Trending Card 3 -->
-    <div class="music-card">
-        <img src="assets/albums/song3.jpg" alt="Album">
-        <h3>Hindi Beats</h3>
-        <p>Popular Bollywood</p>
-    </div>
-
-    <!-- Trending Card 4 -->
-    <div class="music-card">
-        <img src="assets/albums/song4.jpg" alt="Album">
-        <h3>Global Top 50</h3>
-        <p>Worldwide Chartbusters</p>
-    </div>
-
-</div>
-
-</section>
-
-<!-- Recommended -->
-
-<section class="section">
-
-<div class="section-title">
-<h2>❤️ Recommended For You</h2>
-<a href="#">See All</a>
-</div>
-
-<div class="card-container">
-
-<div class="music-card">
-<img src="assets/albums/song5.jpg" alt="">
-<h3>Chill Mix</h3>
-<p>Relax & Enjoy</p>
-</div>
-
-<div class="music-card">
-<img src="assets/albums/song6.jpg" alt="">
-<h3>Workout</h3>
-<p>Power Playlist</p>
-</div>
-
-<div class="music-card">
-<img src="assets/albums/song7.jpg" alt="">
-<h3>Love Songs</h3>
-<p>Romantic Collection</p>
-</div>
-
-<div class="music-card">
-<img src="assets/albums/song8.jpg" alt="">
-<h3>Kerala Beats</h3>
-<p>Naadam Special</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- Mini Player -->
-
-<footer class="mini-player">
-
-<div class="song-info">
-
-<img src="assets/albums/song1.jpg" alt="">
-
-<div>
-
-<h4>Vaa Senthaazhini</h4>
-<p>Justin Prabhakaran</p>
-</div>
-
-</div>
-
-<div class="player-controls">
-
-<i class="fa-solid fa-backward-step"></i>
-
-<i class="fa-solid fa-circle-play play-icon"></i>
-
-<i class="fa-solid fa-forward-step"></i>
-
-</div>
-<div class="progress-container">
-    <span id="currentTime">0:00</span>
-
-    <input type="range" id="progress" value="0" min="0" max="100">
-
-    <span id="duration">0:00</span>
-</div>
-
-</footer>
-
-<audio id="audioPlayer">
-    <source src="songs/Vaa_Senthaazhini_Lyric_Video___Adiyae___G.V.Prakash_Kumar,_Gouri_Kishan__Justin_Prabhakaran__Vignesh(256k).mp3" type="audio/mpeg">
-</audio>
-
-<script src="script.js"></script>
-</body>
-</html>
