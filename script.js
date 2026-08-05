@@ -6,28 +6,23 @@
 // Song Database
 
 const songs = [
-
     {
-        name: "Aradhike",
-        artist: "Ambili",
-        image: "assets/images/song1.jpg",
-        file: "assets/songs/song1.mp3"
+        title: "Vaa Senthaazhini",
+        artist: "G.V. Prakash Kumar",
+        file: "songs/Vaa Senthaazhini.mp3"
     },
 
     {
-        name: "Malare",
-        artist: "Vijay Yesudas",
-        image: "assets/images/song2.jpg",
-        file: "assets/songs/song2.mp3"
+        title: "Idhuvum Kadandhu Pogum (Reprise)",
+        artist: "Girishh",
+        file: "songs/Idhuvum Kadandhu Pogum Reprise.mp3"
     },
 
     {
-        name: "Pavizha Mazha",
-        artist: "Harishankar",
-        image: "assets/images/song3.jpg",
-        file: "assets/songs/song3.mp3"
+        title: "Kaadhal Ponmaan",
+        artist: "Neha Nair",
+        file: "songs/Kaadhal Ponmaan.mp3"
     }
-
 ];
 
 
