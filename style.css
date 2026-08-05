@@ -398,3 +398,49 @@ section h3{
     justify-content:space-around;
     font-size:22px;
 }
+/* Click Effects */
+
+#menu-btn,
+#close-player,
+.mini-player,
+.controls i,
+.extra-controls i{
+    cursor:pointer;
+}
+
+
+/* Play Button Icon */
+
+.main-play i{
+    color:#111;
+    font-size:28px;
+}
+
+
+/* Smooth Player */
+
+.player-screen{
+    overflow-y:auto;
+}
+
+
+/* Cards Better Mobile Scroll */
+
+.cards,
+.playlist{
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.cards::-webkit-scrollbar,
+.playlist::-webkit-scrollbar{
+    display:none;
+}
+
+
+/* Premium Text */
+
+.premium span{
+    color:white;
+    font-weight:600;
+}
