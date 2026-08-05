@@ -115,14 +115,14 @@ image:"images/Thaakol.jpg"
 title:"Ullasa Gaayike",
 artist:"Shaan Rahman",
 file:"songs/Ullasa_Gaayike___Adi_Kapyare_Koottamani___Video___Shaan_Rahman____Manu_Manjith___Dhyan_Sreenivasan(256k).mp3",
-image:"images/ulasa gayike.jpg"
+image:"ulasa gayike.jpg"
 },
 
 {
 title:"Nenjukkul Peidhidum",
 artist:"Hariharan, Devan Ekambaram, V.V. Prassanna",
 file:"songs/Vaaranam_Aayiram_-_Nenjukkul_Peidhidum_Video_Song___Harris_Jayaraj___Suriya,_Sameera_Reddy,(256k).mp3",
-image:"images/Nejukkul-peidhidum.jpg"
+image:"images/Nenjukkul-Peidhidum.jpg"
 },
 
 {
