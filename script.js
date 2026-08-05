@@ -67,7 +67,7 @@ function playSelectedSong(index){
     currentSong = index;
 
     loadSong();
-
+createSongCards();
     playSong();
 
 }
