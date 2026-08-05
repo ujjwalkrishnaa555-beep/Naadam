@@ -38,7 +38,7 @@ image:"images/Amsham.jpg"
 title:"Pularan Neram",
 artist:"Bijibal",
 file:"songs/Android_Kunjappan_Version_5.25___Pularan_Neram_-_Video_Song___Ratheesh_Balakrishnan_Poduval(256k).mp3",
-image:"images/Pularan neram.jpg"
+image:"images/pularan neram.jpg"
 },
 
 {
@@ -66,7 +66,7 @@ image:"images/KALYANI.jpg"
 title:"Kunjikkavil Meghame",
 artist:"Vineeth Sreenivasan",
 file:"songs/Kunjikkavil_Meghame__From__Aashaan__(256k).mp3",
-image:"images/Kunjikkavil-meghame.jpg"
+image:"images/Kunjikkavil-Meghame.jpg"
 },
 
 {
@@ -80,28 +80,28 @@ image:"images/Local gen z anthem.jpg"
 title:"Ninte Pinnale",
 artist:"Karthik",
 file:"songs/Ninte_Pinnale(256k).mp3",
-image:"images/ninta pinnale.jpg"
+image:"images/ninte pinnale.jpg"
 },
 
 {
 title:"Panjara Punch",
 artist:"Santhosh Narayanan",
 file:"songs/Panjara_Punch(256k).mp3",
-image:"images/pajara punch.jpg"
+image:"images/Pajara punch.jpg"
 },
 
 {
 title:"Pottala Muttaye",
 artist:"Santhosh Narayanan",
 file:"songs/Pottala_Muttaye___Thalaivan_Thalaivii___Vijay_Sethupathi,Nithya_Menen__Pandiraaj__Santhosh_Narayanan(256k).mp3",
-image:"images/Pottala Muttaye.jpg"
+image:"images/Pajara punch.jpg"
 },
 
 {
 title:"Malare",
 artist:"Vijay Yesudas",
 file:"songs/Premam_Malare_Video_Song___Rajesh_Murugesan___Vijay_Yesudas___Nivin_Pauly___Sai_Pallavi(256k).mp3",
-image:"images/premam.jpg"
+image:"images/Premam.jpg"
 },
 
 {
@@ -129,7 +129,7 @@ image:"images/Nejukkul-peidhidum.jpg"
 title:"Veera Raja Veera",
 artist:"A.R. Rahman",
 file:"songs/Veera_Raja_Veera_-_Full_Video___PS2_Tamil___@ARRahman___Mani_Ratnam___Jayam_Ravi,_Sobhita_Dhulipala(256k).mp3",
-image:"images/Ps-2.jpg"
+image:"images/PS-2.jpg"
 }
 ];
 
