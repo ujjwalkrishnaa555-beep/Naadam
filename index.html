@@ -3,87 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Naadam Music</title>
 
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
+<!-- Header -->
 <header>
-    <h2>Naadam Music</h2>
+    <div class="top">
+        <i class="fa-solid fa-bars"></i>
+
+        <h2>Naadam</h2>
+
+        <i class="fa-solid fa-bell"></i>
+    </div>
+
     <p>Feel Every Beat 🎵</p>
 </header>
 
+
+<!-- Search -->
 <div class="search-box">
-    <i class="fas fa-search"></i>
+    <i class="fa-solid fa-search"></i>
     <input type="text" placeholder="Search songs, artists...">
 </div>
 
-<section>
-    <h3>🎧 Made For You</h3>
-    <div class="card-row">
-        <div class="card">Playlist 1</div>
-        <div class="card">Playlist 2</div>
-        <div class="card">Playlist 3</div>
-    </div>
-</section>
 
+<!-- Trending -->
 <section>
-    <h3>🔥 Trending Now</h3>
-    <div class="card-row">
-        <div class="card">Song 1</div>
-        <div class="card">Song 2</div>
-        <div class="card">Song 3</div>
-    </div>
-</section>
 
-<section>
-    <h3>🆕 New Releases</h3>
-    <div class="card-row">
-        <div class="card">Album 1</div>
-        <div class="card">Album 2</div>
-        <div class="card">Album 3</div>
-    </div>
-</section>
+<h3>🔥 Trending Now</h3>
 
-<div class="mini-player">
-    <span>🎵 Pookkal Pookkum</span>
-    <i class="fas fa-play"></i>
+<div class="cards">
+
+<div class="music-card">
+<img src="assets/images/song1.jpg">
+<p>Song Name</p>
+<span>Artist</span>
 </div>
 
+
+<div class="music-card">
+<img src="assets/images/song2.jpg">
+<p>Song Name</p>
+<span>Artist</span>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- Made For You -->
+<section>
+
+<h3>🎧 Made For You</h3>
+
+<div class="playlist">
+
+<div>
+🎵 Chill Vibes
+</div>
+
+<div>
+🔥 Workout Mix
+</div>
+
+<div>
+🌙 Night Songs
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Mini Player -->
+
+<div class="mini-player">
+
+<img src="assets/images/song1.jpg">
+
+<div>
+<p>Song Name</p>
+<span>Artist</span>
+</div>
+
+<i class="fa-solid fa-play"></i>
+
+</div>
+
+
+
+<!-- Bottom Navigation -->
+
 <nav class="bottom-nav">
-    <a href="#" class="active">
-        <i class="fas fa-house"></i>
-        <span>Home</span>
-    </a>
 
-    <a href="#">
-        <i class="fas fa-magnifying-glass"></i>
-        <span>Search</span>
-    </a>
+<a class="active">
+<i class="fa-solid fa-house"></i>
+<span>Home</span>
+</a>
 
-    <a href="#">
-        <i class="fas fa-compass"></i>
-        <span>Explore</span>
-    </a>
 
-    <a href="#">
-        <i class="fas fa-book-open"></i>
-        <span>Library</span>
-    </a>
+<a>
+<i class="fa-solid fa-magnifying-glass"></i>
+<span>Search</span>
+</a>
 
-    <a href="#">
-        <i class="fas fa-user"></i>
-        <span>Profile</span>
-    </a>
+
+<a>
+<i class="fa-solid fa-music"></i>
+<span>Library</span>
+</a>
+
+
+<a>
+<i class="fa-solid fa-heart"></i>
+<span>Like</span>
+</a>
+
+
+<a>
+<i class="fa-solid fa-user"></i>
+<span>Profile</span>
+</a>
+
+
 </nav>
 
-<script src="app.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
