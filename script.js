@@ -58,16 +58,23 @@ const progress = document.querySelector(".progress-area input");
 const currentTime = document.querySelector(".time span:first-child");
 const duration = document.querySelector(".time span:last-child");
 
-
+const searchInput = document.querySelector(".search-box input");
 
 // Load Song
-function createSongCards(){
+function filterSongs(searchText){
 
     const container = document.getElementById("songCards");
 
     container.innerHTML = "";
 
-    songs.forEach((song,index)=>{
+    const filteredSongs = songs.filter(song =>
+        song.title.toLowerCase().includes(searchText.toLowerCase()) ||
+        song.artist.toLowerCase().includes(searchText.toLowerCase())
+    );
+
+    filteredSongs.forEach(song => {
+
+        const index = songs.indexOf(song);
 
         container.innerHTML += `
         <div class="song-card" onclick="playSelectedSong(${index})">
@@ -76,9 +83,9 @@ function createSongCards(){
                 <h4>${song.title}</h4>
                 <p>${song.artist}</p>
             </div>
-        </div>
-        `;
+        </div>`;
     });
+
 }
 
 function playSelectedSong(index){
