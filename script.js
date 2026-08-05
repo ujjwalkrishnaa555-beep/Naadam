@@ -61,7 +61,30 @@ const duration = document.querySelector(".time span:last-child");
 
 
 // Load Song
+function createSongCards(){
 
+    const container = document.getElementById("songCards");
+
+    container.innerHTML = "";
+
+    songs.forEach((song,index)=>{
+
+        container.innerHTML += `
+        <div class="song-card" onclick="playSelectedSong(${index})">
+
+            <img src="${song.image}">
+
+            <div>
+                <h4>${song.title}</h4>
+                <p>${song.artist}</p>
+            </div>
+
+        </div>
+        `;
+
+    });
+
+}
 function loadSong(){
 
     let song = songs[currentSong];
