@@ -1,5 +1,3 @@
-// Elements
-
 const menuBtn = document.getElementById("menu-btn");
 const sideMenu = document.querySelector(".side-menu");
 const overlay = document.querySelector(".overlay");
@@ -8,62 +6,108 @@ const playerBtn = document.getElementById("player-btn");
 const playerScreen = document.querySelector(".player-screen");
 const closePlayer = document.getElementById("close-player");
 
+const playButtons = document.querySelectorAll(".fa-play");
 
-// Open Side Menu
 
-menuBtn.addEventListener("click", () => {
+// Side Menu Open
+
+if(menuBtn){
+
+menuBtn.onclick = () => {
 
     sideMenu.classList.add("active");
     overlay.classList.add("active");
 
-});
+};
+
+}
 
 
-// Close Side Menu
+// Close Menu
 
-overlay.addEventListener("click", () => {
+overlay.onclick = () => {
 
     sideMenu.classList.remove("active");
     overlay.classList.remove("active");
 
     playerScreen.classList.remove("active");
 
-});
+};
 
 
-// Open Full Player
 
-playerBtn.addEventListener("click", () => {
+// Full Player Open
+
+if(playerBtn){
+
+playerBtn.onclick = () => {
 
     playerScreen.classList.add("active");
 
-});
+};
+
+}
 
 
-// Close Full Player
 
-closePlayer.addEventListener("click", () => {
+// Full Player Close
+
+if(closePlayer){
+
+closePlayer.onclick = () => {
 
     playerScreen.classList.remove("active");
 
+};
+
+}
+
+
+
+// Play / Pause
+
+let playing = false;
+
+
+playButtons.forEach(btn => {
+
+btn.onclick = () => {
+
+    playing = !playing;
+
+
+    if(playing){
+
+        btn.classList.remove("fa-play");
+        btn.classList.add("fa-pause");
+
+    }
+    else{
+
+        btn.classList.remove("fa-pause");
+        btn.classList.add("fa-play");
+
+    }
+
+};
+
 });
 
 
-// Bottom Navigation Active Change
 
-const navLinks = document.querySelectorAll(".bottom-nav a");
+// Bottom Navigation
+
+const nav = document.querySelectorAll(".bottom-nav a");
 
 
-navLinks.forEach(link => {
+nav.forEach(item=>{
 
-    link.addEventListener("click", () => {
+item.onclick=()=>{
 
-        navLinks.forEach(item => {
-            item.classList.remove("active");
-        });
+nav.forEach(x=>x.classList.remove("active"));
 
-        link.classList.add("active");
+item.classList.add("active");
 
-    });
+};
 
 });
