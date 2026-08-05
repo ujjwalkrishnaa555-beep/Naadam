@@ -17,14 +17,14 @@ image:"images/vaa.jpg"
 title:"Idhuvum Kadandhu Pogum (Reprise)",
 artist:"Girishh",
 file:"songs/Netrikann_-_Idhuvum_Kadandhu_Pogum_Reprise_Lyric___Nayanthara___Vignesh_Shivan___MilindRau,_Girishh(256k).mp3",
-image:"images/idhuvum.jpg"
+image:"images/Idhuvum.jpg"
 },
 
 {
 title:"Kaadhal Ponmaan",
 artist:"Neha Nair",
 file:"songs/Kaadhal_Ponmaan_Video_I_Night_Riders___Mathew_I_Meenakshi___Neha_Nair__Vishnu_Vijay__Yakzan__Vinayak(256k).mp3",
-image:"images/kaadhal.jpg"
+image:"images/Kaadhal.jpg"
 }
 
 ];
