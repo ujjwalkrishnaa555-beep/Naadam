@@ -115,7 +115,7 @@ image:"images/Thaakol.jpg"
 title:"Ullasa Gaayike",
 artist:"Shaan Rahman",
 file:"songs/Ullasa_Gaayike___Adi_Kapyare_Koottamani___Video___Shaan_Rahman____Manu_Manjith___Dhyan_Sreenivasan(256k).mp3",
-image:"ulasa gayike.jpg"
+image:"images/ulasa gayike.jpg"
 },
 
 {
@@ -147,13 +147,13 @@ let isPlaying = false;
 // Elements
 
 const playBtn = document.querySelector(".main-play i");
-const miniPlay = document.querySelector(".mini-player i");
+const miniPlay = document.querySelector("#playBtn i");
 
 const songTitle = document.querySelector(".song-info h2");
 const songArtist = document.querySelector(".song-info p");
 
-const miniTitle = document.querySelector(".mini-player p");
-const miniArtist = document.querySelector(".mini-player span");
+const miniTitle = document.getElementById("miniTitle");
+const miniArtist = document.getElementById("miniArtist");
 
 const albumImages = document.querySelectorAll(".album-area img");
 
