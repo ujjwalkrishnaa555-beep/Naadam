@@ -177,17 +177,32 @@
 <!-- Mini Player -->
 
 <div class="mini-player">
+<div class="mini-player">
 
-<img src="images/vaa.jpg" alt="Album">
+    <img id="miniCover" src="images/default.jpg" alt="cover">
 
-<div>
-<p>Song Name</p>
-<span>Artist</span>
+    <div class="mini-info">
+        <h4 id="miniTitle">No Song Playing</h4>
+        <p id="miniArtist">Naadam Music</p>
+    </div>
+
+    <div class="mini-controls">
+        <button id="prevBtn">
+            <i class="fas fa-backward"></i>
+        </button>
+
+        <button id="playBtn">
+            <i class="fas fa-play"></i>
+        </button>
+
+        <button id="nextBtn">
+            <i class="fas fa-forward"></i>
+        </button>
+    </div>
+
 </div>
 
-<i class="fa-solid fa-play"></i>
-
-</div>
+<audio id="audioPlayer"></audio>
 
 
 
