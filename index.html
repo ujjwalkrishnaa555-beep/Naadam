@@ -208,57 +208,58 @@
 
 
 <!-- Bottom Navigation -->
-
 <nav class="bottom-nav">
 
+    <a id="homeTab" class="active">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
 
-<a class="active">
+    <a id="searchTab">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search</span>
+    </a>
 
-<i class="fa-solid fa-house"></i>
-<span>Home</span>
+    <a id="libraryTab">
+        <i class="fa-solid fa-music"></i>
+        <span>Library</span>
+    </a>
 
-</a>
+    <a id="likeTab">
+        <i class="fa-solid fa-heart"></i>
+        <span>Like</span>
+    </a>
 
-
-
-<a>
-
-<i class="fa-solid fa-magnifying-glass"></i>
-<span>Search</span>
-
-</a>
-
-
-
-<a>
-
-<i class="fa-solid fa-music"></i>
-<span>Library</span>
-
-</a>
-
-
-
-<a>
-
-<i class="fa-solid fa-heart"></i>
-<span>Like</span>
-
-</a>
-
-
-
-<a>
-
-<i class="fa-solid fa-user"></i>
-<span>Profile</span>
-
-</a>
-
+    <a id="profileTab">
+        <i class="fa-solid fa-user"></i>
+        <span>Profile</span>
+    </a>
 
 </nav>
 
 
+<!-- Library -->
+<section id="librarySection" style="display:none;">
+    <h3>🎵 Your Library</h3>
+    <div id="librarySongs"></div>
+</section>
+
+<!-- Favorites -->
+<section id="favoritesSection" style="display:none;">
+    <h3>❤️ Favorites</h3>
+    <div id="favoriteSongs">
+        <p style="color:#888;text-align:center;">No favorite songs yet.</p>
+    </div>
+</section>
+
+<!-- Profile -->
+<section id="profileSection" style="display:none;">
+    <h3>👤 Profile</h3>
+    <div class="profile-card">
+        <h2>Welcome to Naadam</h2>
+        <p>Feel Every Beat 🎵</p>
+    </div>
+</section>
 
 
 
