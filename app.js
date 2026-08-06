@@ -3,23 +3,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const searchInput = document.querySelector(".search-box input");
 
-    searchInput.addEventListener("focus", () => {
-        searchInput.placeholder = "Search your favorite songs...";
-    });
+    if (searchInput) {
+        searchInput.addEventListener("focus", () => {
+            searchInput.placeholder = "Search your favorite songs...";
+        });
 
-    searchInput.addEventListener("blur", () => {
-        searchInput.placeholder = "Search songs, artists...";
-    });
+        searchInput.addEventListener("blur", () => {
+            searchInput.placeholder = "Search songs, artists...";
+        });
+    }
 
-    const playButton = document.querySelector(".mini-player i");
+    loadSong(currentSong);
+ 
+        
 
-    playButton.addEventListener("click", () => {
-        if (playButton.classList.contains("fa-play")) {
-            playButton.classList.remove("fa-play");
-            playButton.classList.add("fa-pause");
-        } else {
-            playButton.classList.remove("fa-pause");
-            playButton.classList.add("fa-play");
-        }
-    });
 });
+const audio = document.getElementById("audioPlayer");
+
+const playBtn = document.getElementById("playBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let currentSong = 0;
+
+function loadSong(index){
+
+    audio.src = songs[index].file;
+
+    document.getElementById("miniTitle").textContent = songs[index].title;
+    document.getElementById("miniArtist").textContent = songs[index].artist;
+    document.getElementById("miniCover").src = songs[index].image;
+
+}
+
+playBtn.onclick = () => {
+
+    if(audio.paused){
+
+        audio.play();
+
+        playBtn.innerHTML =
+        '<i class="fas fa-pause"></i>';
+
+    }else{
+
+        audio.pause();
+
+        playBtn.innerHTML =
+        '<i class="fas fa-play"></i>';
+
+    }
+
+};
+
+nextBtn.onclick = () => {
+
+    currentSong++;
+
+    if(currentSong >= songs.length)
+        currentSong = 0;
+
+    loadSong(currentSong);
+
+    audio.play();
+
+    playBtn.innerHTML =
+    '<i class="fas fa-pause"></i>';
+
+};
+
+prevBtn.onclick = () => {
+
+    currentSong--;
+
+    if(currentSong < 0)
+        currentSong = songs.length-1;
+
+    loadSong(currentSong);
+
+    audio.play();
+
+    playBtn.innerHTML =
+    '<i class="fas fa-pause"></i>';
+
+};
+
+loadSong(currentSong);
