@@ -520,3 +520,79 @@ window.onload = () => {
         filterSongs(e.target.value);
     });
 };
+// ===============================
+// Bottom Navigation
+// ===============================
+
+const homeTab = document.getElementById("homeTab");
+const searchTab = document.getElementById("searchTab");
+const libraryTab = document.getElementById("libraryTab");
+const likeTab = document.getElementById("likeTab");
+const profileTab = document.getElementById("profileTab");
+
+const songSection = document.querySelector(".song-list");
+const madeSection = document.getElementById("madeForYouSection");
+const trendingSection = document.getElementById("trendingSection");
+
+const librarySection = document.getElementById("librarySection");
+const favoritesSection = document.getElementById("favoritesSection");
+const profileSection = document.getElementById("profileSection");
+
+function hideAllSections() {
+    songSection.style.display = "none";
+    madeSection.style.display = "none";
+    trendingSection.style.display = "none";
+    librarySection.style.display = "none";
+    favoritesSection.style.display = "none";
+    profileSection.style.display = "none";
+}
+
+function removeActive() {
+    document.querySelectorAll(".bottom-nav a").forEach(tab => {
+        tab.classList.remove("active");
+    });
+}
+
+homeTab.onclick = () => {
+    hideAllSections();
+    songSection.style.display = "block";
+    madeSection.style.display = "block";
+    trendingSection.style.display = "block";
+
+    removeActive();
+    homeTab.classList.add("active");
+};
+
+libraryTab.onclick = () => {
+    hideAllSections();
+    librarySection.style.display = "block";
+
+    removeActive();
+    libraryTab.classList.add("active");
+};
+
+likeTab.onclick = () => {
+    hideAllSections();
+    favoritesSection.style.display = "block";
+
+    removeActive();
+    likeTab.classList.add("active");
+};
+
+profileTab.onclick = () => {
+    hideAllSections();
+    profileSection.style.display = "block";
+
+    removeActive();
+    profileTab.classList.add("active");
+};
+
+searchTab.onclick = () => {
+    hideAllSections();
+
+    songSection.style.display = "block";
+    document.querySelector(".search-box input").focus();
+
+    removeActive();
+    searchTab.classList.add("active");
+};
